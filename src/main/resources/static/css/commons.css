@@ -1,0 +1,173 @@
+/*body {*/
+/*    background-image: url("../images/background_image.jpg");*/
+/*}*/
+
+
+
+
+/*-------------------------------------------text-----------------------------------------------*/
+.c-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.7 !important;
+}
+
+/* 字体粗细 */
+.c-text-thin {
+    font-weight: 300 !important;
+}
+
+/* 字间距 */
+.c-text-spaced {
+    letter-spacing: 1px !important;
+}
+
+/* 行距 */
+.c-text-lined {
+    line-height: 1.8 !important;
+}
+
+/* 允许显示字体 */
+.c-allow-font {
+    font-size: inherit !important;
+}
+
+/*-------------------------------------------opacity-----------------------------------------------*/
+.c-opacity-mini {
+    opacity: 0.8 !important;
+}
+
+.c-opacity-tiny {
+    opacity: 0.6 !important;
+}
+
+/*-------------------------------------------padded-----------------------------------------------*/
+.c-padded-mini {
+    padding: 0.2em !important;
+}
+
+.c-padded-tiny {
+    padding: 0.3em !important;
+}
+
+.c-padded-small {
+    padding: 0.5em !important;
+}
+
+.c-padded-normal {
+    padding: 1em !important;
+}
+
+.c-padded-large {
+    padding: 2em !important;
+}
+
+.c-padded-big {
+    padding: 3em !important;
+}
+
+.c-padded-huge {
+    padding: 4em !important;
+}
+
+.c-padded-massive {
+    padding: 5em !important;
+}
+
+/*-------------------------------------------padded lr-----------------------------------------------*/
+.c-padded-lr-large {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.c-padded-lr-big {
+    padding-left: 3em !important;
+    padding-right: 3em !important;
+}
+
+/*-------------------------------------------padded tb-----------------------------------------------*/
+.c-padded-tb-mini {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.c-padded-tb-tiny {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+
+.c-padded-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.c-padded-tb-normal {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.c-padded-tb-large {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.c-padded-tb-big {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+
+.c-padded-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+
+.c-padded-tb-massive {
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+/*-------------------------------------------margin tb-----------------------------------------------*/
+.c-margin-tb-mini {
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.c-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
+.c-margin-tb-small {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.c-margin-tb-normal {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+.c-margin-tb-large {
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+}
+
+.c-margin-tb-big {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+}
+
+.c-margin-tb-huge {
+    margin-top: 4em !important;
+    margin-bottom: 4em !important;
+}
+
+.c-margin-tb-massive {
+    margin-top: 5em !important;
+    margin-bottom: 5em !important;
+}
+
+/*-------------------------------------------display-----------------------------------------------*/
+.c-inline-block {
+    display: inline-block !important;
+}

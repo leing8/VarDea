@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    @GetMapping
+    @GetMapping("/")
     public String test(){
         return "index";
+    }
+
+    @GetMapping("/info")
+    public String info(){
+        return "types";
     }
 }

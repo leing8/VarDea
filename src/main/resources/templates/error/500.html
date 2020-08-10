@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>500</title>
+    <th:block th:replace="commons :: link"/>
 </head>
 <body>
-<h1>500</h1>
+<!--<div id="particles-js" style="position:absolute;"></div>-->
+<th:block th:replace="commons :: nav(500)"/>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="m-container-small c-padded-tb-massive">
+    <div class="ui error c-padded-tb-huge">
+        <div class="ui container">
+            <h2>500</h2>
+            <p>遇到BUG了，程序员正在玩命修复中...</p>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<th:block th:replace="commons :: footer"/>
+
+<th:block th:replace="commons :: script"/>
 </body>
 </html>
