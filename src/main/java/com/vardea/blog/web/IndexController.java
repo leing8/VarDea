@@ -18,6 +18,6 @@ public class IndexController {
 
     @GetMapping("/info")
     public String info(){
-        return "types";
+        return "info";
     }
 }
