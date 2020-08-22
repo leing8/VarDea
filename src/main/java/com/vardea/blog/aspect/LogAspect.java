@@ -6,6 +6,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Date 2020/8/10 16:22
  */
 
+@Async
 @Aspect
 @Component
 public class LogAspect {
@@ -46,9 +48,9 @@ public class LogAspect {
         logger.info("===============after================");
     }
 
-    @AfterReturning(returning = "result",pointcut = "log()")
+    @AfterReturning(returning = "result", pointcut = "log()")
     public void doReturn(Object result) {
-        logger.info("result: "+result);
+        logger.info("result: " + result);
     }
 
     @Data

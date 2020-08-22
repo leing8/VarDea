@@ -24,22 +24,23 @@
 }
 
 /* 固定工具栏位置 */
-.m-fixed{
+.m-fixed {
     display: none;
     position: fixed !important;
     z-index: 10 !important;
 }
 
-.m-right-bottom{
+.m-right-bottom {
     bottom: 0 !important;
     right: 0 !important;
 }
 
 /* 目录宽度 */
-.js-toc{
+.js-toc {
     width: 250px !important;
     padding-inline-start: 20px !important;
 }
+
 /* 通用图片大小 */
 .m-current-img {
     width: 120px !important;

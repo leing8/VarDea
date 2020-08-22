@@ -15,25 +15,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/manage/**").hasAnyRole()
-                    .antMatchers("/**").permitAll()
-                    //.antMatchers("/level1/**").hasAnyAuthority("VIP1")
-                    //.antMatchers("/level2/**").hasAnyAuthority("VIP2")
-                    //.antMatchers("/level3/**").hasAnyAuthority("VIP3")
-                    .anyRequest().authenticated()
-                    .and()
+                .antMatchers("/manage/**").hasAnyRole()
+                .antMatchers("/**").permitAll()
+                //.antMatchers("/level1/**").hasAnyAuthority("VIP1")
+                //.antMatchers("/level2/**").hasAnyAuthority("VIP2")
+                //.antMatchers("/level3/**").hasAnyAuthority("VIP3")
+                .anyRequest().authenticated()
+                .and()
                 .formLogin()
-                    //.loginPage("/userlogin")
-                    .usernameParameter("username")
-                    .passwordParameter("password")
-                    .permitAll()
-                    .and()
+                //.loginPage("/userlogin")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .permitAll()
+                .and()
                 .logout()
-                    .logoutSuccessUrl("/")
-                    .permitAll()
-                    .and().
+                .logoutSuccessUrl("/")
+                .permitAll()
+                .and().
                 rememberMe()
-                    .rememberMeParameter("remember")
-                    .userDetailsService(new SecurityUserDetailServiceConfig());
+                .rememberMeParameter("remember")
+                .userDetailsService(new SecurityUserDetailServiceConfig());
     }
 }

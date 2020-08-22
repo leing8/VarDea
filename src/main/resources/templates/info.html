@@ -16,7 +16,8 @@
             <div class="ui horizontal link list">
                 <div class="item">
                     <!--user-header-image-->
-                    <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像"
+                    <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}"
+                         alt="找不到头像"
                          class="ui avatar image">
                     <!--user-name-->
                 </div>
@@ -33,7 +34,8 @@
         </div>
         <!--博客详情图片-->
         <div class="ui attached segment">
-            <img src="../static/images/qiaoba.jpg" th:src="@{/images/qiaoba.jpg}" alt="找不到图片" class="ui fluid rounded image">
+            <img src="../static/images/qiaoba.jpg" th:src="@{/images/qiaoba.jpg}" alt="找不到图片"
+                 class="ui fluid rounded image">
         </div>
         <!--博客详情内容-->
         <div class="ui padded attached segment">
@@ -516,7 +518,8 @@ h5,h6{font-size:1em;}
                             style="vertical-align: inherit;">注释</span></span></h3>
                     <div class="comment">
                         <a class="avatar">
-                            <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
+                            <img src="../static/images/default_header_image.jpg"
+                                 th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
                         </a>
                         <div class="content">
                             <a class="author"><span style="vertical-align: inherit;"><span
@@ -537,7 +540,8 @@ h5,h6{font-size:1em;}
                     </div>
                     <div class="comment">
                         <a class="avatar">
-                            <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
+                            <img src="../static/images/default_header_image.jpg"
+                                 th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
                         </a>
                         <div class="content">
                             <a class="author"><span style="vertical-align: inherit;"><span
@@ -558,7 +562,8 @@ h5,h6{font-size:1em;}
                         <div class="comments">
                             <div class="comment">
                                 <a class="avatar">
-                                    <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
+                                    <img src="../static/images/default_header_image.jpg"
+                                         th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
                                 </a>
                                 <div class="content">
                                     <a class="author"><span style="vertical-align: inherit;"><span
@@ -581,7 +586,8 @@ h5,h6{font-size:1em;}
                     </div>
                     <div class="comment">
                         <a class="avatar">
-                            <img src="../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
+                            <img src="../static/images/default_header_image.jpg"
+                                 th:src="@{/images/default_header_image.jpg}" alt="找不到头像">
                         </a>
                         <div class="content">
                             <a class="author"><span style="vertical-align: inherit;"><span
@@ -672,9 +678,9 @@ h5,h6{font-size:1em;}
         position: 'bottom center'
     });
     tocbot.init({
-       tocSelector: '.js-toc',
-       contentSelector: '.js-toc-content',
-       headingSelector: 'h1, h2, h3',
+        tocSelector: '.js-toc',
+        contentSelector: '.js-toc-content',
+        headingSelector: 'h1, h2, h3',
     });
     $('.toc.button').popup({
         popup: $('.toc-container.popup'),
@@ -682,8 +688,8 @@ h5,h6{font-size:1em;}
         position: 'left center'
     });
     $('.wechat').popup({
-        popup : $('.wechat-qr'),
-        position : 'left center'
+        popup: $('.wechat-qr'),
+        position: 'left center'
     });
     let qrcode = new QRCode(document.getElementById("qrcode"), {
         text: "http://jindo.dev.naver.com/collie",
@@ -693,8 +699,8 @@ h5,h6{font-size:1em;}
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
-    $('#toTop-button').click(function (){
-        $(window).scrollTo(0,500)
+    $('#toTop-button').click(function () {
+        $(window).scrollTo(0, 500)
     });
     let waypoint = new Waypoint({
         element: document.getElementById('waypoint'),
