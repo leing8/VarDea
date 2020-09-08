@@ -8,10 +8,23 @@ server:
 
 spring:
   profiles: dev
+  redis:
+    host: 106.53.99.160
+    password: 1234
+  rabbitmq:
+    host: 106.53.99.160
+  elasticsearch:
+    rest:
+      uris: 106.53.99.160:9200
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          username: elasticsearch
   datasource:
     username: practice
     password: 1234
-    url: jdbc:mysql://127.0.0.1:3306/vardea-blog
+    url: jdbc:mysql://localhost:3306/vardea-blog?useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     #存在SQL文件则自动建表 使用schema: 之后每次启动都会创建表创建一次之后将其注释就好了
@@ -46,8 +59,8 @@ spring:
       # 配置监控服务器
       stat-view-servlet:
         enable: true
-        login-username: admin
-        login-password: 123
+        login-username: root
+        login-password: 1234
         reset-enable: false
         url-pattern: /druid/*
         # 添加IP白名单

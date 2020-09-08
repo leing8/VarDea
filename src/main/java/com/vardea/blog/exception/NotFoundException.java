@@ -4,8 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * @Author Var Dea
- * @Date 2020/8/10 16:07
+ * @author Var Dea
+ * @date 2020/8/10 16:07
  */
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class NotFoundException extends RuntimeException {

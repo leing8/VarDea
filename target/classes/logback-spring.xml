@@ -6,7 +6,7 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
 -->
 <configuration scan="false" scanPeriod="60 seconds" debug="false">
     <!-- 定义日志的根目录 ; 以./路径名将在本项目下生成log文件,以/路径将在项目所在盘符根路径生成-->
-    <property name="LOG_HOME" value="/log/VarDeaBlog/"/>
+    <property name="LOG_HOME" value="./log/VarDeaBlog/"/>
     <!-- 定义日志文件名称 -->
     <property name="appName" value="wadi-springboot"/>
     <!-- ch.qos.logback.core.ConsoleAppender 表示控制台输出 -->

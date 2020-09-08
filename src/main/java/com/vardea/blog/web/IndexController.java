@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * @Author Var Dea
- * @Date 2020/8/10 13:03
+ * @author Var Dea
+ * @date 2020/8/10 13:03
  */
 
 @Controller
