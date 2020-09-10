@@ -74,7 +74,14 @@ spring:
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 
 mybatis:
-  type-aliases-package: com.hnjd.springboot.domain
+  type-aliases-package: com.vardea.blog.domain
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/*Mapper.xml
+
+logging:  #日志级别
+  level:
+    root: info
+    com.blog: debug
+  file:
+    name: ./log/blog-dev.log

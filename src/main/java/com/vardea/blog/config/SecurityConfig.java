@@ -14,10 +14,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                //将druid的请求放行
                 .csrf().ignoringAntMatchers("/druid/*")
                 .and()
                 .authorizeRequests()
                 .antMatchers("/manage/**").hasAnyRole()
+                //拦截所有请求
                 .antMatchers("/**").permitAll()
                 //.antMatchers("/level1/**").hasAnyAuthority("VIP1")
                 //.antMatchers("/level2/**").hasAnyAuthority("VIP2")
@@ -26,7 +28,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 //.loginPage("/userlogin")
+                //指定用户名请求参数名
                 .usernameParameter("username")
+                //指定用户密码请求参数名
                 .passwordParameter("password")
                 .permitAll()
                 .and()
