@@ -1,7 +1,6 @@
 package com.vardea.blog.aop;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.ToString;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
  * @date 2020/8/10 16:22
  * 日志切面,用于记录用户的操作
  */
-
 @Aspect
 @Component
 public class LogAspect {
@@ -29,7 +27,7 @@ public class LogAspect {
     /**
      * 需要增强的方法
      */
-    @Pointcut("execution(* com.vardea.blog.web.*.*(..))")
+    @Pointcut("execution(* com.vardea.blog.web.controller.*.*(..))")
     public void log() {
     }
 
@@ -40,18 +38,16 @@ public class LogAspect {
      */
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
+        RequestLog requestLog = RequestLog.getInstance();
         //获取请求地址
-        String uri = request.getRequestURI();
+        requestLog.url = request.getRequestURI();
         //获取用户ip地址
-        String ip = request.getRemoteAddr();
-        //获取访问的类名
-        String typeName = joinPoint.getSignature().getDeclaringTypeName();
+        requestLog.ip = request.getRemoteAddr();
         //获取访问的方法名
-        String methodName = joinPoint.getSignature().getName();
+        requestLog.methodName = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
         //获取请求参数
-        Object[] args = joinPoint.getArgs();
+        requestLog.args = joinPoint.getArgs();
         //将数据存入请求日志并写入log文件
-        RequestLog requestLog = new RequestLog(uri, ip, typeName + "." + methodName, args);
         logger.info("Request: " + requestLog.toString());
     }
 
@@ -73,12 +69,32 @@ public class LogAspect {
     /**
      * 日志内部类
      */
-    @Data
-    @AllArgsConstructor
-    private class RequestLog {
-        private String url;/*地址*/
-        private String ip;/*ip*/
-        private String classMethod;/*类名*/
-        private Object[] args;/*参数*/
+    @ToString
+    static class RequestLog {
+        private final static RequestLog requestLog = new RequestLog();
+
+        /**
+         * 请求的controller地址
+         */
+        private String url;
+        /**
+         * 发起请求的ip地址
+         */
+        private String ip;
+        /**
+         * 请求的方法名
+         */
+        private String methodName;
+        /**
+         * 请求的参数
+         */
+        private Object[] args;
+
+        private RequestLog() {
+        }
+
+        private static RequestLog getInstance() {
+            return requestLog;
+        }
     }
 }

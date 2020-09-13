@@ -17,20 +17,51 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Comment {
+    /**
+     * 评论编号
+     */
     private Long id;
-    private String nickname;//昵称
+    /**
+     * 评论昵称
+     */
+    private String nickname;
+    /**
+     * 评论邮箱
+     */
     private String email;
+    /**
+     * 评论内容
+     */
     private String content;
-    private boolean adminComment;//是否为管理员评论
-    private String avatar;//头像
+    /**
+     * 是否为管理员评论
+     */
+    private boolean adminComment;
+    /**
+     * 头像
+     */
+    private String avatar;
+    /**
+     * 创建时间
+     */
     private Date createTime;
-    private Long blogId;
-    private Long parentCommentId;//父评论id
+    /**
+     * 父昵称
+     */
     private String parentNickname;
 
-    private Blog blog;
-    private Comment parentComment;//父评论
-    private List<Comment> replyComments = new ArrayList<>();//子评论
+    /**
+     * 博客编号
+     */
+    private Blog blogId;
+    /**
+     * 父评论
+     */
+    private Comment parentCommentId;
+    /**
+     * 子评论
+     */
+    private List<Comment> replyComments;
 
 }
 

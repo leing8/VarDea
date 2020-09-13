@@ -8,19 +8,6 @@ server:
 
 spring:
   profiles: dev
-  redis:
-    host: 106.53.99.160
-    password: 1234
-  rabbitmq:
-    host: 106.53.99.160
-  elasticsearch:
-    rest:
-      uris: 106.53.99.160:9200
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          username: elasticsearch
   datasource:
     username: practice
     password: 1234
@@ -79,7 +66,7 @@ mybatis:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/*Mapper.xml
 
-logging:  #日志级别
+logging: #日志级别
   level:
     root: info
     com.blog: debug

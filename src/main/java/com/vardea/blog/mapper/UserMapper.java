@@ -7,10 +7,8 @@ import com.vardea.blog.domain.User;
  * @date 2020/9/10 20:15
  */
 public interface UserMapper {
-
     /**
-     * 根据用户名密码获取用户
-     *
+     * 获取用户
      * @param username 用户名
      * @param password 密码
      * @return 查询到的用户

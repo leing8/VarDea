@@ -16,9 +16,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tag {
+    /**
+     * 标签编号
+     */
     private Long id;
+    /**
+     * 标签名
+     */
     private String name;
-
-    private List<Blog> blogs = new ArrayList<>();
+    /**
+     * 此标签下的博客
+     */
+    private List<Blog> blogs;
 }
 

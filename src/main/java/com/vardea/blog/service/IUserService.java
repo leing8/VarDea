@@ -8,5 +8,5 @@ import com.vardea.blog.domain.User;
  */
 public interface IUserService {
 
-    User checkUser(String username,String password);
+    User checkUser(String username, String password);
 }

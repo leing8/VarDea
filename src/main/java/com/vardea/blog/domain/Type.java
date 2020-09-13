@@ -16,8 +16,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Type {
+    /**
+     * 分类编号
+     */
     private Long id;
+    /**
+     * 分类名
+     */
     private String name;
-
-    private List<Blog> blogs = new ArrayList<>();
+    /**
+     * 该类型下的博客
+     */
+    private List<Blog> blogs;
 }

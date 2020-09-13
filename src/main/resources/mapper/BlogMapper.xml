@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vardea.blog.mapper.BlogMapper">
+
+    <resultMap id="blogResultMap" type="com.vardea.blog.domain.Blog">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="firstPicture" property="firstPicture"/>
+        <result column="flag" property="flag"/>
+        <result column="views" property="views"/>
+        <result column="appreciation" property="appreciation"/>
+        <result column="shareStatement" property="shareStatement"/>
+        <result column="commentabled" property="commentabled"/>
+        <result column="published" property="published"/>
+        <result column="recommend" property="recommend"/>
+        <result column="createTime" property="createTime"/>
+        <result column="updateTime" property="updateTime"/>
+        <result column="description" property="description"/>
+        <!--<result column="updateTime" property="typeId"/>-->
+        <!--<result column="updateTime" property="userId"/>-->
+        <!--<result column="updateTime" property="tags"/>-->
+        <!--<result column="updateTime" property="comments"/>-->
+    </resultMap>
+
+
+
+    <select id="getBlogList" resultMap="blogResultMap">
+        SELECT * FROM t_blog
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="userId != null">
+                AND user_id = #{userId}
+            </if>
+        </where>
+    </select>
+</mapper>

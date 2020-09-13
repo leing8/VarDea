@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,15 +16,44 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+    /**
+     * 用户编号
+     */
     private Long id;
-    private String nickname;//昵称
+    /**
+     * 用户昵称
+     */
+    private String nickname;
+    /**
+     * 用户名
+     */
     private String username;
+    /**
+     * 密码
+     */
     private String password;
+    /**
+     * 邮箱
+     */
     private String email;
-    private String avatar;//头像
-    private Integer type;//类型(普通用户,管理员用户)
+    /**
+     * 头像
+     */
+    private String avatar;
+    /**
+     * 类型(普通用户,管理员用户)
+     */
+    private Integer type;
+    /**
+     * 创建时间
+     */
     private Date createTime;
+    /**
+     * 更新时间
+     */
     private Date updateTime;
-
-    private List<Blog> blogs = new ArrayList<>();
+    /**
+     * 该用户发布的博客
+     */
+    private List<Blog> blogs;
 }

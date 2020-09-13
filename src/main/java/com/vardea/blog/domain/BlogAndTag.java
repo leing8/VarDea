@@ -13,6 +13,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BlogAndTag {
+    /**
+     * 标签编号
+     */
     private Long tagId;
-    private Long blogId;
+    /**
+     * 博客编号
+     */
+    private Blog blogId;
 }

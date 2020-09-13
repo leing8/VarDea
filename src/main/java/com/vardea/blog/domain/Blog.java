@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,56 +16,76 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Blog {
+    /**
+     * 博客编号
+     */
     private Long id;
+    /**
+     * 博客标题
+     */
     private String title;
+    /**
+     * 博客内容
+     */
     private String content;
-    private String firstPicture;//首图地址
+    /**
+     * 博客首图地址
+     */
+    private String firstPicture;
+    /**
+     * 博客旗子,标志标签
+     */
     private String flag;
-    private Integer views;//浏览次数
-    private boolean appreciation;//开启赞赏
-    private boolean shareStatement;//转载声明是否开启
-    private boolean commentabled;//评论开启
-    private boolean published;//状态(上传,修改,发布等状态)
-    private boolean recommend;//是否推荐
+    /**
+     * 博客浏览次数
+     */
+    private Integer views;
+    /**
+     * 开启赞赏
+     */
+    private boolean appreciation;
+    /**
+     * 转载声明是否开启
+     */
+    private boolean shareStatement;
+    /**
+     * 评论开启
+     */
+    private boolean commentabled;
+    /**
+     * 状态(上传,修改,发布等状态)
+     */
+    private boolean published;
+    /**
+     * 是否推荐
+     */
+    private boolean recommend;
+    /**
+     * 创建时间
+     */
     private Date createTime;
+    /**
+     * 更新时间
+     */
     private Date updateTime;
-
-    //这个属性用来在mybatis中进行连接查询的
-    private Long typeId;
-    private Long userId;
-
-    //获取多个标签的id
-    private String tagIds;
+    /**
+     * 描述
+     */
     private String description;
-
-    private Type type;
-
-    private User user;
-
-    private List<Tag> tags = new ArrayList<>();
-
-    private List<Comment> comments = new ArrayList<>();
-
-    public void init() {
-        this.tagIds = tagsToIds(this.getTags());
-    }
-
-    //将tags集合转换为tagIds字符串形式：“1,2,3”,用于编辑博客时显示博客的tag
-    private String tagsToIds(List<Tag> tags) {
-        if (!tags.isEmpty()) {
-            StringBuilder ids = new StringBuilder();
-            boolean flag = false;
-            for (Tag tag : tags) {
-                if (flag) {
-                    ids.append(",");
-                } else {
-                    flag = true;
-                }
-                ids.append(tag.getId());
-            }
-            return ids.toString();
-        } else {
-            return tagIds;
-        }
-    }
+    /**
+     * 类型
+     */
+    private Type typeId;
+    /**
+     * 发布人
+     */
+    private User userId;
+    /**
+     * 标签
+     */
+    private List<Tag> tags;
+    /**
+     * 评论
+     */
+    private List<Comment> comments;
 }
