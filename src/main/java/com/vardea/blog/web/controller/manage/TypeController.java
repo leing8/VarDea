@@ -59,27 +59,21 @@ public class TypeController {
             return "manage/edit/type";
         }
         int i = typeService.saveType(type);
-        if (i == 1 && type.getId() != null) {
-            redirectAttributes.addFlashAttribute("message", "添加成功");
-        }
+        if (i == 1 && type.getId() != null) redirectAttributes.addFlashAttribute("message", "添加成功");
         return "redirect:/manage/types";
     }
 
     @DeleteMapping("/type/{id}")
     public String removeType(Type type, RedirectAttributes redirectAttributes) {
         int i = typeService.removeType(type);
-        if (i == 1) {
-            redirectAttributes.addFlashAttribute("message", "删除成功");
-        }
+        if (i == 1) redirectAttributes.addFlashAttribute("message", "删除成功");
         return "redirect:/manage/types";
     }
 
     @PutMapping("/type")
     public String updateType(Type type, RedirectAttributes redirectAttributes) {
         int i = typeService.updateType(type);
-        if (i == 1) {
-            redirectAttributes.addFlashAttribute("message", "修改成功");
-        }
+        if (i == 1) redirectAttributes.addFlashAttribute("message", "修改成功");
         return "redirect:/manage/types";
     }
 }
