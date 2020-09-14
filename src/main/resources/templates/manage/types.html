@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="manage/commons :: head(~{::title})">
+    <title>类型列表</title>
+</head>
+<body>
+<th:block th:replace="manage/commons :: nav(types)"/>
+<!--二级导航-->
+<div class="ui attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a th:href="@{/manage/edit/type}" class="item">新增</a>
+            <a th:href="@{/manage/types}" class="teal active item">列表</a>
+        </div>
+    </div>
+</div>
+
+<!--中间-->
+<div class="m-container-small c-padded-tb-big">
+    <!--container能够根据自适应设备屏幕大小-->
+    <div class="ui container">
+        <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+            <i class="close icon"></i>
+            <div class="header">提示：</div>
+            <p th:text="${message}">恭喜，操作成功！</p>
+        </div>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>名称</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="type, interStat : ${pageInfo.list}">
+                <td th:text="${interStat.count}"></td>
+                <td th:text="${type.name}"></td>
+                <td>
+                    <a th:href="@{/manage/edit/{id}/type(id=${type.id})}" class="ui mini teal button">编辑</a>
+                    <button type="button" class="ui mini red button removeBtn" th:attr="rem_uri=@{/manage/type/}+${type.id}">删除</button>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="6" th:if="${pageInfo.pages} > 1">
+                    <div class="mini ui pagination menu">
+                        <div class="item" th:unless="${pageInfo.isFirstPage}"><a th:href="@{/manage/types}">首页</a></div>
+                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.hasNextPage}">
+                            <i class="left chevron icon"></i>
+                        </a>
+                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.hasPreviousPage}">
+                            <i class="right chevron icon"></i>
+                        </a>
+                        <div class="item" th:unless="${pageInfo.isLastPage}"><a th:href="@{/manage/types(pageNum=${pageInfo.pages})}">尾页</a></div>
+                    </div>
+                    <a th:href="@{/manage/edit/type}" class="ui right floated mini teal button">新增</a>
+                </th>
+            </tr>
+            </tfoot>
+        </table>
+        <form id="removeType" method="post">
+            <input type="hidden" name="_method" value="delete"/>
+        </form>
+    </div>
+</div>
+
+<th:block th:replace="manage/commons :: footer"/>
+
+<th:block th:replace="manage/commons :: script"/>
+<!--<script src="./static/js/particles.js"></script>-->
+<script>
+    //particlesJS.load('particles-js', './static/assets/particles.json', function () {
+    //    console.log('particles.js loaded - callback');
+    //});
+    $(".removeBtn").click(function (){
+        $("#removeType").attr("action", $(this).attr("rem_uri")).submit();
+        return false;
+    });
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide')
+    });
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    })
+
+    //消息提示关闭初始化
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+</script>
+</body>
+</html>

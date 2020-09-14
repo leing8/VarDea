@@ -1,8 +1,7 @@
 package com.vardea.blog.web.controller.manage;
 
 import com.vardea.blog.domain.User;
-import com.vardea.blog.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.vardea.blog.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -20,8 +20,8 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/manage")
 public class LoginController {
 
-    @Autowired
-    private IUserService userService;
+    @Resource
+    private UserService userService;
 
     @PostMapping("/login")
     public String login(@RequestParam String username,
@@ -32,7 +32,7 @@ public class LoginController {
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user", user);
-            return "redirect:main.html";
+            return "redirect:main";
         } else {
             redirectAttributes.addFlashAttribute("message", "账号密码不匹配!");
             return "manage/login";

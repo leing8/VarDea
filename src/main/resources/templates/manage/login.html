@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>博客管理登录</title>
-    <th:block th:replace="manage/commons :: link"/>
+<head th:replace="manage/commons :: head(~{::title})">
+    <title>后台登录</title>
 </head>
 <body>
 
@@ -51,7 +49,7 @@
     </div>
 </div>
 
-<th:block th:replace="commons :: script"/>
+<th:block th:replace="manage/commons :: script"/>
 <!--<script src="./static/js/particles.js"></script>-->
 </body>
 </html>

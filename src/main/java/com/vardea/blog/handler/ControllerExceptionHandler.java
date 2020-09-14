@@ -19,13 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     //对控制器抛出的运行时期异常进行处理
     @ExceptionHandler(RuntimeException.class)
     public ModelAndView exceptionHandler(HttpServletRequest request, RuntimeException e) {
-        //将抛出的异常做日志记录-------------------------------->待优化,在日志切面做增强
-        logger.error("Request URL : {}, Exception : {}", request.getRequestURL(), e);
         //不对带ResponseStatus注解的异常做处理
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
             throw e;

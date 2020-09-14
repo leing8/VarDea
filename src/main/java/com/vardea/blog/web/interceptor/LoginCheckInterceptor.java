@@ -14,7 +14,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //若无会话中无用户登录信息则进行拦截
-        if (request.getSession().getAttribute("user") == null){
+        if (request.getSession().getAttribute("user") == null) {
             //重定向到登录页
             response.sendRedirect("/manage");
             return false;

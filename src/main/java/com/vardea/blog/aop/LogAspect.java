@@ -27,7 +27,7 @@ public class LogAspect {
     /**
      * 需要增强的方法
      */
-    @Pointcut("execution(* com.vardea.blog.web.controller.*.*(..))")
+    @Pointcut("execution(* com.vardea.blog.*.*Controller*.*(..))")
     public void log() {
     }
 

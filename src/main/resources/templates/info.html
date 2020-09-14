@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+<head th:replace="commons :: head(~{::title})">
     <title>详情</title>
-    <th:block th:replace="commons :: link"/>
 </head>
 <body>
 <th:block th:replace="commons :: nav(blog)"/>

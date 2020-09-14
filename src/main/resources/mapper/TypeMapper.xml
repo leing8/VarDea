@@ -4,4 +4,44 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vardea.blog.mapper.TypeMapper">
 
+    <resultMap id="typeResultMap" type="type">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <collection property="blogs" ofType="blog"
+                    select="com.vardea.blog.mapper.BlogMapper.getBlogByTypeId" column="id"/>
+    </resultMap>
+
+    <sql id="typeBaseWhere">
+        <where>
+            <if test="id != null">
+                AND id = #{id}
+            </if>
+            <if test="name != null">
+                AND `name` = #{name}
+            </if>
+        </where>
+    </sql>
+
+    <insert id="saveType" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_type(`name`) VALUES (#{name})
+    </insert>
+
+    <delete id="removeType">
+        DELETE FROM t_type
+        <include refid="typeBaseWhere"/>
+    </delete>
+
+    <update id="updateType">
+        UPDATE t_type SET `name` = #{name} WHERE id = #{id}
+    </update>
+
+    <select id="getType" resultMap="typeResultMap">
+        SELECT id, `name` FROM t_type
+        <include refid="typeBaseWhere"/>
+    </select>
+
+    <select id="listType" resultMap="typeResultMap">
+        SELECT id, `name` FROM t_type
+        <include refid="typeBaseWhere"/>
+    </select>
 </mapper>

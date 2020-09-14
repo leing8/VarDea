@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:fragment="head(title)">
     <meta charset="UTF-8">
-    <title>通用的管理员页面</title>
-    <th:block th:fragment="link">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-        <link rel="stylesheet" href="../static/lib/animate/animate.min.css" th:href="@{/lib/animate/animate.min.css}"/>
-        <link rel="stylesheet" href="../static/lib/typo/typo.css" th:href="@{/lib/typo/typo.css}">
-        <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
-        <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
-        <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
-        <link rel="stylesheet" href="../static/css/commons.css" th:href="@{/css/commons.css}">
-    </th:block>
+    <title th:replace="${title}">通用管理模板</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" th:href="@{/lib/editormd/css/editormd.min.css}">
+    <link rel="stylesheet" th:href="@{/css/me.css}">
+    <link rel="stylesheet" th:href="@{/css/commons.css}">
 </head>
 <body>
 
@@ -21,13 +16,20 @@
         <div class="ui container">
             <div class="ui inverted secondary stackable menu">
                 <h2 class="ui teal header item"> 后台管理 </h2>
-                <a href="#" class="active m-item item m-mobile-hide" th:classappend="${selected=='blog'} ? 'active'"><i class="idea icon"></i> 博客 </a>
-                <a href="#" class="m-item item m-mobile-hide" th:classappend="${selected=='tags'} ? 'active'"><i class="tags icon"></i> 标签 </a>
-                <a href="#" class="m-item item m-mobile-hide" th:classappend="${selected=='clone'} ? 'active'"><i class="clone icon"></i> 归档 </a>
+                <a href="#" th:href="@{/manage/blogs}" class="m-item item m-mobile-hide"
+                   th:classappend="${selected=='blogs'} ? 'active'"><i
+                        class="home icon"></i> 博客 </a>
+                <a href="#" th:href="@{/manage/types}" class="m-item item m-mobile-hide"
+                   th:classappend="${selected=='types'} ? 'active'"><i
+                        class="idea icon"></i> 分类 </a>
+                <a href="#" th:href="@{/manage/tags}" class="m-item item m-mobile-hide"
+                   th:classappend="${selected=='tags'} ? 'active'"><i
+                        class="tags icon"></i> 标签 </a>
                 <div class="right m-item menu m-mobile-hide">
                     <div class="ui dropdown item">
                         <div class="text">
-                            <img src="../../static/images/default_header_image.jpg" th:src="@{/images/default_header_image.jpg}" alt="找不到头像" class="ui avatar image">
+                            <img src="../../static/images/default_header_image.jpg"
+                                 th:src="@{/images/default_header_image.jpg}" alt="找不到头像" class="ui avatar image">
                             蒋乐行
                         </div>
                         <i class="dropdown icon"></i>
@@ -98,13 +100,7 @@
 <th:block th:fragment="script">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
-    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
-    <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
-    <script src="../static/lib/scrollto/jquery.scrollTo.min.js"
-            th:src="@{/lib/scrollto/jquery.scrollTo.min.js}"></script>
-    <script src="../static/lib/waypoints/jquery.waypoints.min.js"
-            th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+    <script th:src="@{/lib/editormd/editormd.min.js}"></script>
 </th:block>
 </body>
 </html>

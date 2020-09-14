@@ -8,6 +8,11 @@ server:
 
 spring:
   profiles: dev
+  # 启用restful风格提交表单 否则405
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
   datasource:
     username: practice
     password: 1234
@@ -66,9 +71,15 @@ mybatis:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mapper/*Mapper.xml
 
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
 logging: #日志级别
   level:
     root: info
-    com.blog: debug
+    com.vardea.blog: debug
   file:
     name: ./log/blog-dev.log

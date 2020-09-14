@@ -5,20 +5,20 @@
 <mapper namespace="com.vardea.blog.mapper.BlogMapper">
 
     <resultMap id="blogResultMap" type="com.vardea.blog.domain.Blog">
-        <id column="id" property="id"/>
-        <result column="title" property="title"/>
-        <result column="content" property="content"/>
-        <result column="firstPicture" property="firstPicture"/>
-        <result column="flag" property="flag"/>
-        <result column="views" property="views"/>
-        <result column="appreciation" property="appreciation"/>
-        <result column="shareStatement" property="shareStatement"/>
-        <result column="commentabled" property="commentabled"/>
-        <result column="published" property="published"/>
-        <result column="recommend" property="recommend"/>
-        <result column="createTime" property="createTime"/>
-        <result column="updateTime" property="updateTime"/>
-        <result column="description" property="description"/>
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="firstPicture" column="firstPicture"/>
+        <result property="flag" column="flag"/>
+        <result property="views" column="views"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="shareStatement" column="shareStatement"/>
+        <result property="commentabled" column="commentabled"/>
+        <result property="published" column="published"/>
+        <result property="recommend" column="recommend"/>
+        <result property="createTime" column="createTime"/>
+        <result property="updateTime" column="updateTime"/>
+        <result property="description" column="description"/>
         <!--<result column="updateTime" property="typeId"/>-->
         <!--<result column="updateTime" property="userId"/>-->
         <!--<result column="updateTime" property="tags"/>-->
@@ -26,8 +26,7 @@
     </resultMap>
 
 
-
-    <select id="getBlogList" resultMap="blogResultMap">
+    <select id="listBlog" resultMap="blogResultMap">
         SELECT * FROM t_blog
         <where>
             <if test="id != null">
@@ -38,4 +37,17 @@
             </if>
         </where>
     </select>
+    <select id="getBlogByTypeId" resultType="com.vardea.blog.domain.Blog">
+        SELECT
+        id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled,
+        published, recommend, create_time, update_time, type_id, user_id, description, tag_ids
+        FROM t_blog
+        <where>
+            <if test="typeId != null">
+                type_id = #{typeId}
+            </if>
+        </where>
+    </select>
+
+
 </mapper>

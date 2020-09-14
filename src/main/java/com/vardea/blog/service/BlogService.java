@@ -8,7 +8,9 @@ import java.util.List;
  * @author leing
  * @date 2020/9/13 21:07
  */
-public interface IBlogService {
+public interface BlogService {
 
-    List<Blog> getBlogList();
+    List<Blog> listBlog();
+
+
 }

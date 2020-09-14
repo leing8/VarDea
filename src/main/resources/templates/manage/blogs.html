@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>后台管理</title>
-    <th:block th:replace="manage/commons :: link"/>
+<head th:replace="manage/commons :: head(~{::title})">
+    <title>博客列表</title>
 </head>
 <body>
-<!--导航-->
-<th:block th:replace="manage/commons :: nav(index)"/>
+<th:block th:replace="manage/commons :: nav(blogs)"/>
 <!--二级导航-->
 <div class="ui attached pointing menu">
     <div class="ui container">
@@ -99,10 +96,9 @@
     </div>
 </div>
 
-<!--底部-->
 <th:block th:replace="manage/commons :: footer"/>
 
-<th:block th:replace="commons :: script"/>
+<th:block th:replace="manage/commons :: script"/>
 <!--<script src="./static/js/particles.js"></script>-->
 <script>
     //particlesJS.load('particles-js', './static/assets/particles.json', function () {

@@ -16,10 +16,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+        //使来自访问首页的用户都访问index页面
+        registry.addViewController("/").setViewName("/index");
         //使来自项目根目录以及访问index.html的请求都访问login.html页面
         registry.addViewController("/manage").setViewName("/manage/login");
         //登录后防止表单重复提交
-        registry.addViewController("/manage/main.html").setViewName("/manage/index");
+        registry.addViewController("/manage/main").setViewName("/manage/index");
+        registry.addViewController("/manage/edit/blog").setViewName("/manage/edit/blog");
     }
 
     @Override

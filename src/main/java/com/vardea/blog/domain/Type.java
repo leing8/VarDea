@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 /**
@@ -23,6 +23,7 @@ public class Type {
     /**
      * 分类名
      */
+    @NotEmpty(message = "请输入类型名称")
     private String name;
     /**
      * 该类型下的博客

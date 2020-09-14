@@ -1,0 +1,181 @@
+2020-09-14 22:51:17.941  INFO 11160 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 11160 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 22:51:17.941 DEBUG 11160 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 22:51:17.941  INFO 11160 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 22:51:18.144  INFO 11160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 22:51:18.144  INFO 11160 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 22:51:20.222  INFO 11160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 22:51:20.238  INFO 11160 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 22:51:20.238  INFO 11160 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 22:51:20.347  INFO 11160 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 22:51:20.347  INFO 11160 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2203 ms
+2020-09-14 22:51:20.675  INFO 11160 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 22:51:21.941  INFO 11160 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 22:51:22.753  INFO 11160 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 22:51:22.862  INFO 11160 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 22:51:23.347  INFO 11160 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 22:51:23.409  INFO 11160 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 22:51:23.425  INFO 11160 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 6.441 seconds (JVM running for 8.168)
+2020-09-14 22:51:36.744  INFO 11160 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 22:51:36.744  INFO 11160 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 22:51:36.768  INFO 11160 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2020-09-14 22:52:06.141  INFO 11160 --- [http-nio-80-exec-4] com.vardea.blog.aop.LogAspect            : Request: LogAspect.RequestLog(url=/info, ip=0:0:0:0:0:0:0:1, methodName=com.vardea.blog.handler.ControllerExceptionHandler.exceptionHandler, args=[org.apache.catalina.connector.RequestFacade@11477053, java.lang.ArithmeticException: / by zero])
+2020-09-14 22:52:06.150  INFO 11160 --- [http-nio-80-exec-4] com.vardea.blog.aop.LogAspect            : result: ModelAndView [view="error/error"; model={url=http://localhost/info, exception=java.lang.ArithmeticException: / by zero}]
+2020-09-14 22:52:06.150  INFO 11160 --- [http-nio-80-exec-4] com.vardea.blog.aop.LogAspect            : ===============after================
+2020-09-14 22:52:06.152  WARN 11160 --- [http-nio-80-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2020-09-14 22:53:29.804  INFO 11160 --- [http-nio-80-exec-5] com.vardea.blog.aop.LogAspect            : Request: LogAspect.RequestLog(url=/info, ip=0:0:0:0:0:0:0:1, methodName=com.vardea.blog.handler.ControllerExceptionHandler.exceptionHandler, args=[org.apache.catalina.connector.RequestFacade@11477053, java.lang.ArithmeticException: / by zero])
+2020-09-14 22:53:29.804  INFO 11160 --- [http-nio-80-exec-5] com.vardea.blog.aop.LogAspect            : result: ModelAndView [view="error/error"; model={url=http://localhost/info, exception=java.lang.ArithmeticException: / by zero}]
+2020-09-14 22:53:29.804  INFO 11160 --- [http-nio-80-exec-5] com.vardea.blog.aop.LogAspect            : ===============after================
+2020-09-14 22:53:29.805  WARN 11160 --- [http-nio-80-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2020-09-14 23:00:07.374  INFO 10020 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 10020 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:00:07.389 DEBUG 10020 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:00:07.389  INFO 10020 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:00:07.952  INFO 10020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:00:07.952  INFO 10020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:00:15.281  INFO 10020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:00:15.406  INFO 10020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:00:15.406  INFO 10020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:00:15.765  INFO 10020 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:00:15.765  INFO 10020 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7813 ms
+2020-09-14 23:00:16.000  INFO 10020 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:00:21.187  INFO 10020 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:00:24.780  INFO 10020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:00:25.139  INFO 10020 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:00:27.072  INFO 10020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:00:27.260  INFO 10020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:00:27.478  INFO 10020 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 23.498 seconds (JVM running for 28.764)
+2020-09-14 23:01:06.292  INFO 10020 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 23:01:06.292  INFO 10020 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 23:01:06.317  INFO 10020 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2020-09-14 23:01:13.593 DEBUG 10020 --- [http-nio-80-exec-6] c.vardea.blog.mapper.UserMapper.getUser  : ==>  Preparing: SELECT * FROM t_USER WHERE username = ? AND password = ?
+2020-09-14 23:01:13.774 DEBUG 10020 --- [http-nio-80-exec-6] c.vardea.blog.mapper.UserMapper.getUser  : ==> Parameters: 蒋乐行(String), 81dc9bdb52d04dc20036dbd8313ed055(String)
+2020-09-14 23:01:13.809 DEBUG 10020 --- [http-nio-80-exec-6] c.vardea.blog.mapper.UserMapper.getUser  : <==      Total: 1
+2020-09-14 23:02:25.544 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.TypeMapper.listType_COUNT   : ==>  Preparing: SELECT count(0) FROM t_type
+2020-09-14 23:02:25.549 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.TypeMapper.listType_COUNT   : ==> Parameters: 
+2020-09-14 23:02:25.554 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.TypeMapper.listType_COUNT   : <==      Total: 1
+2020-09-14 23:02:25.557 DEBUG 10020 --- [http-nio-80-exec-7] c.v.blog.mapper.TypeMapper.listType      : ==>  Preparing: SELECT id, `name` FROM t_type LIMIT ?
+2020-09-14 23:02:25.563 DEBUG 10020 --- [http-nio-80-exec-7] c.v.blog.mapper.TypeMapper.listType      : ==> Parameters: 5(Integer)
+2020-09-14 23:02:25.567 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====>  Preparing: SELECT id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids FROM t_blog WHERE type_id = ?
+2020-09-14 23:02:25.569 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====> Parameters: 1(Long)
+2020-09-14 23:02:25.585 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : <====      Total: 3
+2020-09-14 23:02:25.587 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====>  Preparing: SELECT id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids FROM t_blog WHERE type_id = ?
+2020-09-14 23:02:25.588 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====> Parameters: 3(Long)
+2020-09-14 23:02:25.596 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : <====      Total: 2
+2020-09-14 23:02:25.598 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====>  Preparing: SELECT id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids FROM t_blog WHERE type_id = ?
+2020-09-14 23:02:25.598 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====> Parameters: 4(Long)
+2020-09-14 23:02:25.601 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : <====      Total: 0
+2020-09-14 23:02:25.603 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====>  Preparing: SELECT id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids FROM t_blog WHERE type_id = ?
+2020-09-14 23:02:25.604 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====> Parameters: 5(Long)
+2020-09-14 23:02:25.608 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : <====      Total: 1
+2020-09-14 23:02:25.612 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====>  Preparing: SELECT id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids FROM t_blog WHERE type_id = ?
+2020-09-14 23:02:25.613 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : ====> Parameters: 6(Long)
+2020-09-14 23:02:25.618 DEBUG 10020 --- [http-nio-80-exec-7] c.v.b.mapper.BlogMapper.getBlogByTypeId  : <====      Total: 2
+2020-09-14 23:02:25.619 DEBUG 10020 --- [http-nio-80-exec-7] c.v.blog.mapper.TypeMapper.listType      : <==      Total: 5
+2020-09-14 23:05:31.218  INFO 5696 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 5696 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:05:31.218 DEBUG 5696 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:05:31.218  INFO 5696 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:05:31.421  INFO 5696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:05:31.421  INFO 5696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:05:33.327  INFO 5696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:05:33.343  INFO 5696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:05:33.343  INFO 5696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:05:33.421  INFO 5696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:05:33.421  INFO 5696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2000 ms
+2020-09-14 23:05:33.671  INFO 5696 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:05:34.796  INFO 5696 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:05:35.452  INFO 5696 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:05:35.593  INFO 5696 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:05:36.265  INFO 5696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:05:36.343  INFO 5696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:05:36.358  INFO 5696 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 6.072 seconds (JVM running for 7.505)
+2020-09-14 23:06:05.817  INFO 5696 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 23:06:05.817  INFO 5696 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 23:06:05.837  INFO 5696 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-09-14 23:06:12.451 DEBUG 5696 --- [http-nio-80-exec-7] c.vardea.blog.mapper.UserMapper.getUser  : ==>  Preparing: SELECT * FROM t_USER WHERE username = ? AND password = ?
+2020-09-14 23:06:12.610 DEBUG 5696 --- [http-nio-80-exec-7] c.vardea.blog.mapper.UserMapper.getUser  : ==> Parameters: 蒋乐行(String), 81dc9bdb52d04dc20036dbd8313ed055(String)
+2020-09-14 23:06:12.644 DEBUG 5696 --- [http-nio-80-exec-7] c.vardea.blog.mapper.UserMapper.getUser  : <==      Total: 1
+2020-09-14 23:13:55.916  INFO 10292 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 10292 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:13:55.932 DEBUG 10292 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:13:55.932  INFO 10292 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:13:56.104  INFO 10292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:13:56.104  INFO 10292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:13:58.322  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:13:58.338  INFO 10292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:13:58.338  INFO 10292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:13:58.416  INFO 10292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:13:58.416  INFO 10292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2312 ms
+2020-09-14 23:13:58.713  INFO 10292 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:13:59.916  INFO 10292 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:14:00.666  INFO 10292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:14:00.853  INFO 10292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:14:01.385  INFO 10292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:14:01.431  INFO 10292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:14:01.447  INFO 10292 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 6.455 seconds (JVM running for 7.902)
+2020-09-14 23:15:35.124  INFO 6856 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 6856 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:15:35.140 DEBUG 6856 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:15:35.140  INFO 6856 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:15:35.343  INFO 6856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:15:35.359  INFO 6856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:15:37.187  INFO 6856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:15:37.202  INFO 6856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:15:37.202  INFO 6856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:15:37.296  INFO 6856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:15:37.296  INFO 6856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1937 ms
+2020-09-14 23:15:37.546  INFO 6856 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:15:38.593  INFO 6856 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:15:39.296  INFO 6856 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:15:39.421  INFO 6856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:15:39.843  INFO 6856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:15:39.905  INFO 6856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:15:39.905  INFO 6856 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 5.635 seconds (JVM running for 7.309)
+2020-09-14 23:15:43.316  INFO 6856 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 23:15:43.317  INFO 6856 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 23:15:43.338  INFO 6856 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-09-14 23:15:50.277 DEBUG 6856 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : ==>  Preparing: SELECT * FROM t_USER WHERE username = ? AND password = ?
+2020-09-14 23:15:50.430 DEBUG 6856 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : ==> Parameters: 蒋乐行(String), 81dc9bdb52d04dc20036dbd8313ed055(String)
+2020-09-14 23:15:50.465 DEBUG 6856 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : <==      Total: 1
+2020-09-14 23:19:01.944  INFO 1192 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 1192 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:19:01.959 DEBUG 1192 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:19:01.959  INFO 1192 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:19:02.147  INFO 1192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:19:02.147  INFO 1192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:19:04.178  INFO 1192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:19:04.209  INFO 1192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:19:04.209  INFO 1192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:19:04.303  INFO 1192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:19:04.303  INFO 1192 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2156 ms
+2020-09-14 23:19:04.584  INFO 1192 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:19:05.662  INFO 1192 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:19:06.365  INFO 1192 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:19:06.506  INFO 1192 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:19:06.959  INFO 1192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:19:07.006  INFO 1192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:19:07.021  INFO 1192 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 6.019 seconds (JVM running for 7.561)
+2020-09-14 23:19:11.355  INFO 1192 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 23:19:11.355  INFO 1192 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 23:19:11.377  INFO 1192 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-09-14 23:19:16.856 DEBUG 1192 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : ==>  Preparing: SELECT * FROM t_USER WHERE username = ? AND password = ?
+2020-09-14 23:19:17.015 DEBUG 1192 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : ==> Parameters: 蒋乐行(String), 81dc9bdb52d04dc20036dbd8313ed055(String)
+2020-09-14 23:19:17.047 DEBUG 1192 --- [http-nio-80-exec-1] c.vardea.blog.mapper.UserMapper.getUser  : <==      Total: 1
+2020-09-14 23:37:19.733  INFO 8856 --- [restartedMain] com.vardea.blog.BlogApplication          : Starting BlogApplication on Vostro-14-3449 with PID 8856 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-14 23:37:19.749 DEBUG 8856 --- [restartedMain] com.vardea.blog.BlogApplication          : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-14 23:37:19.749  INFO 8856 --- [restartedMain] com.vardea.blog.BlogApplication          : The following profiles are active: dev
+2020-09-14 23:37:19.920  INFO 8856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-14 23:37:19.920  INFO 8856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-14 23:37:21.686  INFO 8856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-14 23:37:21.702  INFO 8856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-14 23:37:21.702  INFO 8856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-14 23:37:21.780  INFO 8856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-14 23:37:21.780  INFO 8856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1860 ms
+2020-09-14 23:37:22.092  INFO 8856 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-14 23:37:23.201  INFO 8856 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-14 23:37:23.873  INFO 8856 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-14 23:37:24.014  INFO 8856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-14 23:37:24.451  INFO 8856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-14 23:37:24.498  INFO 8856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-14 23:37:24.514  INFO 8856 --- [restartedMain] com.vardea.blog.BlogApplication          : Started BlogApplication in 5.66 seconds (JVM running for 7.057)
+2020-09-14 23:37:28.458  INFO 8856 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-14 23:37:28.460  INFO 8856 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-14 23:37:28.480  INFO 8856 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-09-14 23:37:43.465 DEBUG 8856 --- [http-nio-80-exec-4] c.vardea.blog.mapper.UserMapper.getUser  : ==>  Preparing: SELECT * FROM t_USER WHERE username = ? AND password = ?
+2020-09-14 23:37:43.639 DEBUG 8856 --- [http-nio-80-exec-4] c.vardea.blog.mapper.UserMapper.getUser  : ==> Parameters: 蒋乐行(String), 81dc9bdb52d04dc20036dbd8313ed055(String)
+2020-09-14 23:37:43.671 DEBUG 8856 --- [http-nio-80-exec-4] c.vardea.blog.mapper.UserMapper.getUser  : <==      Total: 1
