@@ -14,7 +14,6 @@ public class IndexController {
     @GetMapping("/info")
     public String info() {
         //User user = userMapper.getUser("朱一鸣", "e10adc3949ba59abbe56e057f20f883e");
-        System.out.println(1 / 0);
         return "info";
     }
 }
