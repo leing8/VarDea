@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vardea.blog.mapper.TypeMapper">
 
-    <resultMap id="typeResultMap" type="type">
+    <resultMap id="typeResultMap" type="Type">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
-        <collection property="blogs" ofType="blog"
-                    select="com.vardea.blog.mapper.BlogMapper.getBlogByTypeId" column="id"/>
+            <collection property="blogs" column="id" ofType="Blog"
+                    select="com.vardea.blog.mapper.BlogMapper.getBlogByType"/>
     </resultMap>
 
     <sql id="typeBaseWhere">

@@ -8,6 +8,7 @@ import com.vardea.blog.domain.User;
 import com.vardea.blog.mapper.BlogMapper;
 import com.vardea.blog.mapper.TypeMapper;
 import com.vardea.blog.mapper.UserMapper;
+import com.vardea.blog.service.BlogService;
 import com.vardea.blog.service.TypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,16 +28,10 @@ class BlogApplicationTests {
     private DataSource dataSource;
 
     @Resource
-    private UserMapper userMapper;
-
-    @Resource
-    private BlogMapper blogMapper;
-
-    @Resource
-    private TypeMapper typeMapper;
-
-    @Resource
     private TypeService typeService;
+
+    @Resource
+    private BlogService blogService;
 
     @Test
     void contextLoads() throws SQLException {
@@ -59,17 +54,17 @@ class BlogApplicationTests {
 
     @Test
     public void mybatisTest() {
-        User user = userMapper.getUser("朱一鸣", "e10adc3949ba59abbe56e057f20f883e");
-        System.out.println(user);
-        System.out.println("-----------------------------------------------------------------------------");
-        List<Blog> blogList = blogMapper.listBlog();
-        for (Blog blog : blogList) {
-            System.out.println(blog);
-        }
+        //User user = userMapper.getUser("朱一鸣", "e10adc3949ba59abbe56e057f20f883e");
+        //System.out.println(user);
+        //System.out.println("-----------------------------------------------------------------------------");
+        //List<Blog> blogList = blogMapper.listBlog();
+        //for (Blog blog : blogList) {
+        //    System.out.println(blog);
+        //}
     }
 
     @Test
-    public void typeMapperTest(){
+    public void typeMapperTest() {
         //Type type = new Type();
         //type.setName("第二条测试数据");
         //Type resultType = typeService.getType(type);
@@ -107,4 +102,23 @@ class BlogApplicationTests {
         //System.out.println(resultType == null);
     }
 
+    @Test
+    public void typeAndBlogServiceTest() {
+        //Type type = new Type();
+        //type.setId(1L);
+        //Type resultType = typeService.getType(type);
+        //System.out.println(resultType);
+        //System.out.println(resultType.getBlogs().size());
+        //Blog blog = new Blog();
+        //blog.setId(1L);
+        //Blog resultBlog = blogService.getBlog(blog);
+        //System.out.println(resultBlog);
+        //List<Type> types = typeService.listType(null);
+        //System.out.println(types);
+        Blog blog = new Blog();
+        blog.setId(3L);
+        Blog resultBlog = blogService.getBlog(blog);
+
+        System.out.println(resultBlog);
+    }
 }

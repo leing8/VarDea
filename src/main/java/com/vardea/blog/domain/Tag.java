@@ -1,19 +1,21 @@
 package com.vardea.blog.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
+
+
 
 /**
  * @author leing
  * @date 2020/9/9 17:40
  * 博客标签类
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Tag {
     /**
      * 标签编号
@@ -27,5 +29,12 @@ public class Tag {
      * 此标签下的博客
      */
     private List<Blog> blogs;
-}
 
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}

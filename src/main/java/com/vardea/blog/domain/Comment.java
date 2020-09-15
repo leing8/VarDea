@@ -1,8 +1,6 @@
 package com.vardea.blog.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
@@ -12,9 +10,11 @@ import java.util.List;
  * @date 2020/9/9 17:39
  * 评论类
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Comment {
     /**
      * 评论编号
@@ -62,5 +62,18 @@ public class Comment {
      */
     private List<Comment> replyComments;
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", content='" + content + '\'' +
+                ", adminComment=" + adminComment +
+                ", avatar='" + avatar + '\'' +
+                ", createTime=" + createTime +
+                ", parentNickname='" + parentNickname + '\'' +
+                '}';
+    }
 }
 

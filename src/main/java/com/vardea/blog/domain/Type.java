@@ -1,8 +1,6 @@
 package com.vardea.blog.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
@@ -12,9 +10,11 @@ import java.util.List;
  * @date 2020/9/9 17:40
  * 博客分类
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Type {
     /**
      * 分类编号
@@ -29,4 +29,12 @@ public class Type {
      * 该类型下的博客
      */
     private List<Blog> blogs;
+
+    @Override
+    public String toString() {
+        return "Type{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

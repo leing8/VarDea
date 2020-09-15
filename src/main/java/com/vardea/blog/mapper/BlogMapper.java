@@ -14,7 +14,7 @@ public interface BlogMapper {
      *
      * @return 博客集合
      */
-    List<Blog> listBlog();
+    List<Blog> listBlog(Blog blog);
 
-    Blog getBlogByTypeId();
+    Blog getBlog(Blog blog);
 }

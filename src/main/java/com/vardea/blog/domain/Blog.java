@@ -1,8 +1,6 @@
 package com.vardea.blog.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
@@ -12,9 +10,11 @@ import java.util.List;
  * @date 2020/9/9 17:37
  * 博客类
  */
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Blog {
     /**
      * 博客编号
@@ -88,4 +88,27 @@ public class Blog {
      * 评论
      */
     private List<Comment> comments;
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", flag='" + flag + '\'' +
+                ", views=" + views +
+                ", appreciation=" + appreciation +
+                ", shareStatement=" + shareStatement +
+                ", commentabled=" + commentabled +
+                ", published=" + published +
+                ", recommend=" + recommend +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", description='" + description + '\'' +
+                ", typeId=" + typeId +
+                ", userId=" + userId +
+                ", tags=" + tags +
+                '}';
+    }
 }

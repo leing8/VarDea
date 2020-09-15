@@ -22,7 +22,13 @@ public class BlogServiceImpl implements BlogService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Blog> listBlog() {
-        return blogMapper.listBlog();
+    public List<Blog> listBlog(Blog blog) {
+        return blogMapper.listBlog(blog);
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public Blog getBlog(Blog blog) {
+        return blogMapper.getBlog(blog);
     }
 }

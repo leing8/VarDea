@@ -21,8 +21,8 @@ public class BlogController {
     private BlogService blogService;
 
     @RequestMapping("/blogs")
-    public String blogs(Model model) {
-        List<Blog> blogList = blogService.listBlog();
+    public String blogs(Blog blog, Model model) {
+        List<Blog> blogList = blogService.listBlog(blog);
         model.addAttribute("blogs", blogList);
         return "manage/blogs";
     }

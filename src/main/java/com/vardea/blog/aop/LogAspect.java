@@ -25,9 +25,12 @@ public class LogAspect {
     private HttpServletRequest request;
 
     /**
-     * 需要增强的方法
+     * 需要增强的方法:
+     * 对任意修饰符 com.vardea.blog.web及其子包中以Controller结尾的类的方法
+     * 对意修饰符 com.vardea.blog.handler包中以Handler结尾的类的方法
+     * 做增强
      */
-    @Pointcut("execution(* com.vardea.blog.*.*Controller*.*(..))")
+    @Pointcut("execution(* com.vardea.blog.web..*Controller.*(..)) || execution(* com.vardea.blog.handler.*Handler.*(..))")
     public void log() {
     }
 

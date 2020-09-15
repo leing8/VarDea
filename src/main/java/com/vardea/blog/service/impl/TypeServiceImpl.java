@@ -44,7 +44,6 @@ public class TypeServiceImpl implements TypeService {
     @Transactional(readOnly = true)
     @Override
     public List<Type> listType(Type type) {
-        //PageHelper.startPage();
         return typeMapper.listType(type);
     }
 }
