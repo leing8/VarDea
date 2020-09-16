@@ -1,6 +1,6 @@
 package com.vardea.blog.web.controller.manage;
 
-import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.vardea.blog.domain.Type;
 import com.vardea.blog.service.TypeService;
@@ -26,9 +26,8 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String listTypes(@RequestParam(required = false, defaultValue = "1", value = "pageNum") int pageNum, Model model) {
-        PageHelper.startPage(pageNum, 5);
-        List<Type> allType = typeService.listType(null);
+    public String listTypes(Page<Type> page, Model model) {
+        List<Type> allType = typeService.listType(null, page);
         //得到分页结果对象
         PageInfo<Type> pageInfo = new PageInfo<>(allType);
         model.addAttribute("pageInfo", pageInfo);
@@ -37,7 +36,7 @@ public class TypeController {
 
     @GetMapping("/edit/type")
     public String toAddPage(Model model) {
-        model.addAttribute("type",new Type());
+        model.addAttribute("type", new Type());
         return "manage/edit/type";
     }
 
@@ -55,7 +54,7 @@ public class TypeController {
 
         Type t = typeService.getType(type);
         if (t != null) {
-            bindingResult.rejectValue("name","nameError","已有"+type.getName()+"类型, 请重新添加!");
+            bindingResult.rejectValue("name", "nameError", "已有" + type.getName() + "类型, 请重新添加!");
             return "manage/edit/type";
         }
         int i = typeService.saveType(type);

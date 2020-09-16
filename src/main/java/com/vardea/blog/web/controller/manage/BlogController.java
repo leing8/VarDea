@@ -1,5 +1,6 @@
 package com.vardea.blog.web.controller.manage;
 
+import com.github.pagehelper.Page;
 import com.vardea.blog.domain.Blog;
 import com.vardea.blog.service.BlogService;
 import org.springframework.stereotype.Controller;
@@ -21,8 +22,8 @@ public class BlogController {
     private BlogService blogService;
 
     @RequestMapping("/blogs")
-    public String blogs(Blog blog, Model model) {
-        List<Blog> blogList = blogService.listBlog(blog);
+    public String blogs(Page<Blog> page, Blog blog, Model model) {
+        List<Blog> blogList = blogService.listBlog(blog, page);
         model.addAttribute("blogs", blogList);
         return "manage/blogs";
     }

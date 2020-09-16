@@ -1,5 +1,7 @@
 package com.vardea.blog.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.vardea.blog.domain.Type;
 import com.vardea.blog.mapper.TypeMapper;
 import com.vardea.blog.service.TypeService;
@@ -43,7 +45,8 @@ public class TypeServiceImpl implements TypeService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Type> listType(Type type) {
+    public List<Type> listType(Type type, Page<Type> page) {
+        PageHelper.startPage(page.getPageNum(), 5);
         return typeMapper.listType(type);
     }
 }

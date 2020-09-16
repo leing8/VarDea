@@ -12,6 +12,7 @@ import com.vardea.blog.mapper.UserMapper;
 import com.vardea.blog.service.BlogService;
 import com.vardea.blog.service.TagService;
 import com.vardea.blog.service.TypeService;
+import com.vardea.blog.util.MD5Utils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -42,6 +43,12 @@ class BlogApplicationTests {
     void contextLoads() throws SQLException {
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
+    }
+
+    @Test
+    public void userTest(){
+        String code = MD5Utils.code("1234");
+        System.out.println(code);
     }
 
     @Test

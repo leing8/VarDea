@@ -1,6 +1,6 @@
 package com.vardea.blog.web.controller.manage;
 
-import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.vardea.blog.domain.Tag;
 import com.vardea.blog.service.TagService;
@@ -26,9 +26,8 @@ public class TagController {
     private TagService tagService;
 
     @GetMapping("/tags")
-    public String listTag(@RequestParam(required = false, defaultValue = "1", value = "pageNum") int pageNum, Model model) {
-        PageHelper.startPage(pageNum, 5);
-        List<Tag> allTag = tagService.listTag(null);
+    public String listTag(Page<Tag> page, Model model) {
+        List<Tag> allTag = tagService.listTag(null, page);
         //得到分页结果对象
         PageInfo<Tag> pageInfo = new PageInfo<>(allTag);
         model.addAttribute("pageInfo", pageInfo);

@@ -38,6 +38,9 @@
                     select="com.vardea.blog.mapper.TagMapper.getTagByBlog"/>
         <!--<result column="updateTime" property="comments"/>-->
     </resultMap>
+    <insert id="saveBlog"></insert>
+    <delete id="removeBlog"></delete>
+    <update id="updateBlog"></update>
 
 
     <select id="listBlog" resultMap="blogResultMap">

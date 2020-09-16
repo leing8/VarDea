@@ -1,5 +1,6 @@
 package com.vardea.blog.service;
 
+import com.github.pagehelper.Page;
 import com.vardea.blog.domain.Type;
 
 import java.util.List;
@@ -47,5 +48,5 @@ public interface TypeService {
      *
      * @return 查询到的类型集合
      */
-    List<Type> listType(Type type);
+    List<Type> listType(Type type, Page<Type> page);
 }

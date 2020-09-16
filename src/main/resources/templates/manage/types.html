@@ -47,10 +47,10 @@
                 <th colspan="6" th:if="${pageInfo.pages} > 1">
                     <div class="mini ui pagination menu">
                         <div class="item" th:unless="${pageInfo.isFirstPage}"><a th:href="@{/manage/types}">首页</a></div>
-                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">
+                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasPreviousPage} ? ${pageInfo.prePage} : 1)}" th:unless="${pageInfo.isFirstPage}">
                             <i class="left chevron icon"></i>
                         </a>
-                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">
+                        <a class="icon item" th:href="@{/manage/types(pageNum=${pageInfo.hasNextPage} ? ${pageInfo.nextPage} : ${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">
                             <i class="right chevron icon"></i>
                         </a>
                         <div class="item" th:unless="${pageInfo.isLastPage}"><a th:href="@{/manage/types(pageNum=${pageInfo.pages})}">尾页</a></div>

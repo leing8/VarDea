@@ -1,5 +1,7 @@
 package com.vardea.blog.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.vardea.blog.domain.Blog;
 import com.vardea.blog.mapper.BlogMapper;
 import com.vardea.blog.service.BlogService;
@@ -20,15 +22,31 @@ public class BlogServiceImpl implements BlogService {
     @Resource
     private BlogMapper blogMapper;
 
-    @Transactional(readOnly = true)
     @Override
-    public List<Blog> listBlog(Blog blog) {
-        return blogMapper.listBlog(blog);
+    public int saveBlog(Blog blog) {
+        return blogMapper.saveBlog(blog);
+    }
+
+    @Override
+    public int removeBlog(Blog blog) {
+        return blogMapper.removeBlog(blog);
+    }
+
+    @Override
+    public int updateBlog(Blog blog) {
+        return blogMapper.updateBlog(blog);
     }
 
     @Transactional(readOnly = true)
     @Override
     public Blog getBlog(Blog blog) {
         return blogMapper.getBlog(blog);
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<Blog> listBlog(Blog blog, Page<Blog> page) {
+        PageHelper.startPage(page.getPageNum(), 5);
+        return blogMapper.listBlog(blog);
     }
 }

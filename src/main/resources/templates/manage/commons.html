@@ -29,8 +29,8 @@
                     <div class="ui dropdown item">
                         <div class="text">
                             <img src="../../static/images/default_header_image.jpg"
-                                 th:src="@{/images/default_header_image.jpg}" alt="找不到头像" class="ui avatar image">
-                            蒋乐行
+                                 th:src="@{${session.user.avatar}}" alt="找不到头像" class="ui avatar image">
+                            <span th:text="${session.user.nickname}"></span>
                         </div>
                         <i class="dropdown icon"></i>
                         <div class="menu">

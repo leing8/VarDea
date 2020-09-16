@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -27,14 +28,14 @@ public class LoginController {
     public String login(@RequestParam String username,
                         @RequestParam String password,
                         HttpSession session,
-                        RedirectAttributes redirectAttributes) {
+                        HttpServletRequest request) {
         User user = userService.checkUser(username, password);
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user", user);
             return "redirect:main";
         } else {
-            redirectAttributes.addFlashAttribute("message", "账号密码不匹配!");
+            request.setAttribute("message", "账号密码不匹配!");
             return "manage/login";
         }
     }
@@ -43,6 +44,6 @@ public class LoginController {
     public String loginOut(HttpSession session) {
         //将登陆成功的用户信息清空
         session.removeAttribute("user");
-        return "redirect:manage";
+        return "redirect:/manage";
     }
 }

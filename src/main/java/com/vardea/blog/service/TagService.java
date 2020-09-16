@@ -1,5 +1,6 @@
 package com.vardea.blog.service;
 
+import com.github.pagehelper.Page;
 import com.vardea.blog.domain.Tag;
 
 import java.util.List;
@@ -18,5 +19,5 @@ public interface TagService {
 
     Tag getTag(Tag tag);
 
-    List<Tag> listTag(Tag tag);
+    List<Tag> listTag(Tag tag, Page<Tag> page);
 }
