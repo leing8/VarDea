@@ -64,11 +64,21 @@
           AND tb.user_id = tu.id
     </select>
 
+    <!--Type额外SQL 多表查询时将相应的Blog查询出来-->
     <select id="getBlogByType" resultType="Blog">
         SELECT
         id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled,
         published, recommend, create_time, update_time, type_id, user_id, description, tag_ids
         FROM t_blog WHERE type_id = #{typeId}
+    </select>
+
+    <!--Tag额外SQL 多表查询时将相应的Blog查询出来-->
+    <select id="getBlogByTag" resultType="Blog">
+        SELECT
+            *
+        FROM t_blog tb
+        JOIN t_blog_tags tbt ON tb.id = tbt.blog_id
+        WHERE tbt.tag_id = 4
     </select>
 
 </mapper>

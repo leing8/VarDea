@@ -2,6 +2,7 @@ package com.vardea.blog.domain;
 
 import lombok.*;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 
@@ -24,6 +25,7 @@ public class Tag {
     /**
      * 标签名
      */
+    @NotEmpty(message = "请输入标签名称")
     private String name;
     /**
      * 此标签下的博客

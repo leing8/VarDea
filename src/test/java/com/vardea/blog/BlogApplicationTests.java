@@ -3,12 +3,14 @@ package com.vardea.blog;
 import com.github.pagehelper.PageHelper;
 import com.vardea.blog.aop.LogAspect;
 import com.vardea.blog.domain.Blog;
+import com.vardea.blog.domain.Tag;
 import com.vardea.blog.domain.Type;
 import com.vardea.blog.domain.User;
 import com.vardea.blog.mapper.BlogMapper;
 import com.vardea.blog.mapper.TypeMapper;
 import com.vardea.blog.mapper.UserMapper;
 import com.vardea.blog.service.BlogService;
+import com.vardea.blog.service.TagService;
 import com.vardea.blog.service.TypeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,9 @@ class BlogApplicationTests {
 
     @Resource
     private BlogService blogService;
+
+    @Resource
+    private TagService tagService;
 
     @Test
     void contextLoads() throws SQLException {
@@ -86,7 +91,7 @@ class BlogApplicationTests {
         //Type type = new Type();
         //type.setId(14L);
         //type.setName("测试修改");
-        //int aByte1 = typeMapper.updateType(type);
+        //int aByte1 = typeService.updateType(type);
         //System.out.println(aByte1);
 
         //使用pagehelper插件做分页 测试
@@ -100,6 +105,13 @@ class BlogApplicationTests {
         //
         //System.out.println(resultType);
         //System.out.println(resultType == null);
+
+        //Type type = new Type();
+        //type.setId(1L);
+        //Type resultType = typeService.getType(type);
+        //
+        //System.out.println(resultType);
+        //System.out.println(resultType.getBlogs().size());
     }
 
     @Test
@@ -120,5 +132,32 @@ class BlogApplicationTests {
         Blog resultBlog = blogService.getBlog(blog);
 
         System.out.println(resultBlog);
+    }
+
+    @Test
+    public void tagTest(){
+        /*Tag tag = new Tag();
+        tag.setId(4L);
+        Tag resultTag = tagService.getTag(tag);
+        System.out.println(resultTag);
+        System.out.println(resultTag.getBlogs().size());*/
+
+/*        Tag tag = new Tag();
+        tag.setId(null);
+        tag.setName("Test测试添加");
+        int i = tagService.saveTag(tag);
+        System.out.println(i);*/
+
+/*        Tag tag = new Tag();
+        tag.setId(11L);
+        tag.setName(null);
+        int i = tagService.removeTag(tag);
+        System.out.println(i); */
+
+/*        Tag tag = new Tag();
+        tag.setId(10L);
+        tag.setName("test 再次 测试修改");
+        int i2 = tagService.updateTag(tag);
+        System.out.println(i2);*/
     }
 }

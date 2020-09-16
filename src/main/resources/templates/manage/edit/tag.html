@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="manage/commons :: head(~{::title})">
-    <title>编辑类型</title>
+    <title>编辑标签</title>
 </head>
 <body>
-<th:block th:replace="manage/commons :: nav(type)"/>
+<th:block th:replace="manage/commons :: nav(tag)"/>
 <!--二级导航-->
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a th:href="@{/manage/edit/type}" class="active item">新增</a>
-            <a th:href="@{/manage/types}" class="teal item">列表</a>
+            <a th:href="@{/manage/edit/tag}" class="active item">新增</a>
+            <a th:href="@{/manage/tags}" class="teal item">列表</a>
         </div>
     </div>
 </div>
@@ -19,14 +19,14 @@
 <div class="m-container-small c-padded-tb-big">
     <!--container能够根据自适应设备屏幕大小-->
     <div class="ui container">
-        <form th:action="*{id} == null ? @{/manage/type} : @{/manage/type}" th:object="${type}" method="post" class="ui form">
+        <form th:action="*{id} == null ? @{/manage/tag} : @{/manage/tag}" th:object="${tag}" method="post" class="ui form">
             <input type="hidden" name="id" th:value="*{id}">
             <input type="hidden" name="_method" value="put" th:if="*{id} != null"/>
             <div class="required field">
                 <div class="ui left labeled input">
                     <label for="indexPicture" class="ui teal basic label">名称</label>
-                    <input type="text" id="indexPicture" name="name" placeholder="分类名称"
-                           required th:placeholder="*{name} ? *{name} : '分类名称'">
+                    <input type="text" id="indexPicture" name="name" placeholder="标签名称"
+                           required th:placeholder="*{name} ? *{name} : '标签名称'">
                 </div>
             </div>
 

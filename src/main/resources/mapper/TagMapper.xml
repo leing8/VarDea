@@ -8,15 +8,38 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <collection property="blogs" column="id" ofType="Blog"
-                    select="com.vardea.blog.mapper.BlogMapper.getBlog"/>
+                    select="com.vardea.blog.mapper.BlogMapper.getBlogByTag"/>
     </resultMap>
 
-    <insert id="saveTag"></insert>
-    <delete id="removeTag"></delete>
-    <update id="updateTag"></update>
-    <select id="getTag" resultType="Tag"></select>
-    <select id="listTag" resultType="Tag"></select>
+    <insert id="saveTag">
+        INSERT INTO t_tag(name) VALUE (#{name})
+    </insert>
 
+    <delete id="removeTag">
+        DELETE FROM t_tag
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateTag">
+        UPDATE t_tag
+        SET name = #{name}
+        WHERE id = #{id}
+    </update>
+
+    <select id="getTag" resultMap="tagResultMap">
+        SELECT
+        *
+        FROM t_tag
+        WHERE id = #{id}
+    </select>
+
+    <select id="listTag" resultType="Tag">
+        SELECT
+        *
+        FROM t_tag
+    </select>
+
+    <!--Blog额外SQL 多表查询时将相应的Tag查询出来-->
     <select id="getTagByBlog" resultMap="tagResultMap">
         SELECT *
         FROM t_tag tt
