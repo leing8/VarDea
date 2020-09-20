@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = "blogs")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -56,19 +57,4 @@ public class User {
      * 该用户发布的博客
      */
     private List<Blog> blogs;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", type=" + type +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                '}';
-    }
 }

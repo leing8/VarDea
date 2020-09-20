@@ -1,0 +1,246 @@
+2020-09-20 21:00:57.613  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7436 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:00:57.615 DEBUG 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:00:57.615  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:01:01.881  INFO 7436 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:01:04.722  INFO 7436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:01:06.928  INFO 7436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:01:07.260  INFO 7436 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:01:08.455  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.918 seconds (JVM running for 16.287)
+2020-09-20 21:01:09.034 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:01:09.426 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 1(Long)
+2020-09-20 21:01:09.513 DEBUG 7436 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:01:09.517 DEBUG 7436 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 1(Long)
+2020-09-20 21:01:09.536 DEBUG 7436 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:01:09.540 DEBUG 7436 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:01:09.549 DEBUG 7436 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:01:09.554 DEBUG 7436 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:01:09.559 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
+2020-09-20 21:01:09.606  INFO 7436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:01:09.621  INFO 7436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:01:26.107  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 1588 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:01:26.109 DEBUG 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:01:26.110  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:01:28.873  INFO 1588 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:01:31.458  INFO 1588 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:01:33.635  INFO 1588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:01:33.994  INFO 1588 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:01:35.176  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.516 seconds (JVM running for 13.564)
+2020-09-20 21:01:35.729 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:01:36.075 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 1(Long)
+2020-09-20 21:01:36.136 DEBUG 1588 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:01:36.142 DEBUG 1588 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 1(Long)
+2020-09-20 21:01:36.146 DEBUG 1588 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:01:36.149 DEBUG 1588 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:01:36.164 DEBUG 1588 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:01:36.169 DEBUG 1588 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:01:36.173 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
+2020-09-20 21:01:36.219  INFO 1588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:01:36.235  INFO 1588 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:02:32.095  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8700 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:02:32.097 DEBUG 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:02:32.097  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:02:34.798  INFO 8700 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:02:37.467  INFO 8700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:02:39.556  INFO 8700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:02:39.910  INFO 8700 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:02:41.101  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.252 seconds (JVM running for 12.925)
+2020-09-20 21:02:41.598 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:02:41.957 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: null
+2020-09-20 21:02:42.015 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 0
+2020-09-20 21:02:42.074  INFO 8700 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:02:42.119  INFO 8700 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:04:53.393  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12476 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:04:53.396 DEBUG 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:04:53.397  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:04:56.257  INFO 12476 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:04:58.778  INFO 12476 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:05:00.820  INFO 12476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:05:01.125  INFO 12476 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:05:02.212  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.151 seconds (JVM running for 12.716)
+2020-09-20 21:05:02.680  INFO 12476 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:05:02.700  INFO 12476 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:05:50.409  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8592 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:05:50.411 DEBUG 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:05:50.411  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:05:53.276  INFO 8592 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:05:55.899  INFO 8592 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:05:57.873  INFO 8592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:05:58.217  INFO 8592 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:05:59.344  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.433 seconds (JVM running for 13.429)
+2020-09-20 21:06:00.079 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog
+2020-09-20 21:06:00.804 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
+2020-09-20 21:06:00.902 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
+2020-09-20 21:06:00.912 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==>  Preparing: SELECT * FROM t_blog LIMIT ?, ?
+2020-09-20 21:06:00.943 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==> Parameters: 5(Long), 5(Integer)
+2020-09-20 21:06:00.959 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:01.026 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 6(Long)
+2020-09-20 21:06:01.036 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:06:01.038 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:06:01.052 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:06:01.053 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:01.056 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:01.056 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 10(Long)
+2020-09-20 21:06:01.060 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:01.064 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:01.065 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 11(Long)
+2020-09-20 21:06:01.071 DEBUG 8592 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:01.074 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
+2020-09-20 21:06:01.148  INFO 8592 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:06:01.173  INFO 8592 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:06:23.900  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 2448 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:06:23.902 DEBUG 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:06:23.902  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:06:26.724  INFO 2448 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:06:29.626  INFO 2448 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:06:31.624  INFO 2448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:06:31.965  INFO 2448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:06:33.132  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.448 seconds (JVM running for 13.03)
+2020-09-20 21:06:33.818 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog
+2020-09-20 21:06:34.382 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
+2020-09-20 21:06:34.512 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
+2020-09-20 21:06:34.512 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==>  Preparing: SELECT * FROM t_blog LIMIT ?, ?
+2020-09-20 21:06:34.532 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==> Parameters: 5(Long), 5(Integer)
+2020-09-20 21:06:34.542 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:34.591 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 6(Long)
+2020-09-20 21:06:34.599 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:06:34.602 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:06:34.615 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:06:34.616 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:34.619 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:34.620 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 10(Long)
+2020-09-20 21:06:34.623 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:34.626 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:06:34.626 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 11(Long)
+2020-09-20 21:06:34.632 DEBUG 2448 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:06:34.634 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
+2020-09-20 21:06:34.683  INFO 2448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:06:34.703  INFO 2448 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:07:55.062  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:07:55.065 DEBUG 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:07:55.065  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:07:57.991  INFO 12296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:08:00.913  INFO 12296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:08:02.939  INFO 12296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:08:03.267  INFO 12296 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:08:04.337  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.651 seconds (JVM running for 13.252)
+2020-09-20 21:08:05.056 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:08:05.669 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
+2020-09-20 21:08:05.724 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
+2020-09-20 21:08:05.735 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.type_id = tt.id AND tb.user_id = tu.id LIMIT ?, ?
+2020-09-20 21:08:05.745 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : ==> Parameters: 5(Long), 5(Integer)
+2020-09-20 21:08:05.757 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:08:05.761 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 6(Long)
+2020-09-20 21:08:05.766 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:08:05.768 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:08:05.779 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:08:05.780 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:08:05.784 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:08:05.785 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 10(Long)
+2020-09-20 21:08:05.788 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:08:05.790 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:08:05.791 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 11(Long)
+2020-09-20 21:08:05.795 DEBUG 12296 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:08:05.797 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
+2020-09-20 21:08:05.847  INFO 12296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:08:05.864  INFO 12296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:34:16.320  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:34:16.324 DEBUG 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:34:16.325  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:34:20.471  INFO 10296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:34:23.195  INFO 10296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:34:25.351  INFO 10296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:34:25.726  INFO 10296 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:34:27.013  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.94 seconds (JVM running for 16.05)
+2020-09-20 21:34:27.536 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==>  Preparing: INSERT INTO t_blog(title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-09-20 21:34:27.896 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==> Parameters: test(String), test(String), test(String), test(String), 200(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-09-20 21:34:27.44(Timestamp), 2020-09-20 21:34:27.44(Timestamp), 1(Long), 1(Long), test(String), null
+2020-09-20 21:34:27.914 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : <==    Updates: 1
+2020-09-20 21:34:28.314  INFO 10296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:34:28.335  INFO 10296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:36:00.748  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12872 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:36:00.750 DEBUG 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:36:00.750  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:36:03.696  INFO 12872 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:36:06.399  INFO 12872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:36:09.794  INFO 12872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:36:10.253  INFO 12872 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:36:12.077  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.944 seconds (JVM running for 15.889)
+2020-09-20 21:36:12.986 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:36:13.452 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 12(Long)
+2020-09-20 21:36:13.517 DEBUG 12872 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:36:13.520 DEBUG 12872 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 12(Long)
+2020-09-20 21:36:13.528 DEBUG 12872 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:36:13.532 DEBUG 12872 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:36:13.548 DEBUG 12872 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:36:13.555 DEBUG 12872 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:36:13.559 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
+2020-09-20 21:36:13.608  INFO 12872 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:36:13.624  INFO 12872 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:37:14.665  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10524 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:37:14.667 DEBUG 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:37:14.668  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:37:17.559  INFO 10524 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:37:20.304  INFO 10524 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:37:22.359  INFO 10524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:37:22.732  INFO 10524 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:37:23.798  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.485 seconds (JVM running for 13.431)
+2020-09-20 21:37:24.316 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
+2020-09-20 21:37:24.664 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 12(Long)
+2020-09-20 21:37:24.723 DEBUG 10524 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
+2020-09-20 21:37:24.727 DEBUG 10524 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====> Parameters: 12(Long)
+2020-09-20 21:37:24.731 DEBUG 10524 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======>  Preparing: SELECT * FROM t_blog tb JOIN t_blog_tags tbt ON tb.id = tbt.blog_id WHERE tbt.tag_id = 4
+2020-09-20 21:37:24.736 DEBUG 10524 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : ======> Parameters: 
+2020-09-20 21:37:24.753 DEBUG 10524 --- [main] c.v.blog.mapper.BlogMapper.getBlogByTag  : <======      Total: 4
+2020-09-20 21:37:24.758 DEBUG 10524 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : <====      Total: 1
+2020-09-20 21:37:24.760 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
+2020-09-20 21:37:24.813  INFO 10524 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:37:24.828  INFO 10524 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:39:34.914  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8960 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:39:34.917 DEBUG 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:39:34.918  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:39:37.776  INFO 8960 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:39:42.355  INFO 8960 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:39:44.392  INFO 8960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:39:44.705  INFO 8960 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:39:45.831  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.376 seconds (JVM running for 15.26)
+2020-09-20 21:39:46.330 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : ==>  Preparing: DELETE FROM t_blog WHERE id = ?
+2020-09-20 21:39:46.690 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : ==> Parameters: 12(Long)
+2020-09-20 21:39:46.701 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : <==    Updates: 1
+2020-09-20 21:39:46.751  INFO 8960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:39:46.767  INFO 8960 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:49:16.155  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 13156 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:49:16.158 DEBUG 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:49:16.159  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:49:18.829  INFO 13156 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:49:21.543  INFO 13156 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:49:23.707  INFO 13156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:49:24.041  INFO 13156 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:49:25.272  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.525 seconds (JVM running for 13.392)
+2020-09-20 21:49:25.832 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==>  Preparing: INSERT INTO t_blog(title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2020-09-20 21:49:26.248 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==> Parameters: test(String), test(String), test(String), test(String), 200(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-09-20 21:49:25.735(Timestamp), 2020-09-20 21:49:25.735(Timestamp), 1(Long), 1(Long), test(String), null
+2020-09-20 21:49:26.261 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : <==    Updates: 1
+2020-09-20 21:49:26.311  INFO 13156 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:49:26.329  INFO 13156 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:51:27.109  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7712 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:51:27.111 DEBUG 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:51:27.114  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:51:30.310  INFO 7712 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:51:33.094  INFO 7712 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:51:35.258  INFO 7712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:51:35.633  INFO 7712 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:51:36.655  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 11.043 seconds (JVM running for 14.465)
+2020-09-20 21:51:37.222 DEBUG 7712 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==>  Preparing: UPDATE t_blog SET AND title = ? AND content = ? AND first_picture = ? AND flag = ? AND appreciation = ? AND share_statement = ? AND commentabled = ? AND published = ? AND recommend = ? AND create_time = ? AND update_time = ? AND type_id = ? AND user_id = ? WHERE id = ?
+2020-09-20 21:51:37.620  INFO 7712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:51:37.637  INFO 7712 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-20 21:52:52.300  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12576 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:52:52.302 DEBUG 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:52:52.303  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:52:55.311  INFO 12576 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-20 21:52:57.923  INFO 12576 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-20 21:53:00.066  INFO 12576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:53:00.462  INFO 12576 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-20 21:53:01.612  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.739 seconds (JVM running for 13.862)
+2020-09-20 21:53:02.172 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==>  Preparing: UPDATE t_blog SET title = ? , content = ? , first_picture = ? , flag = ? , appreciation = ? , share_statement = ? , commentabled = ? , published = ? , recommend = ? , create_time = ? , update_time = ? , type_id = ? , user_id = ? WHERE id = ?
+2020-09-20 21:53:02.506 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==> Parameters: testUpdate(String), testUpdate(String), testUpdate(String), testUpdate(String), false(Boolean), false(Boolean), false(Boolean), false(Boolean), false(Boolean), 2020-09-20 21:53:02.029(Timestamp), 2020-09-20 21:53:02.029(Timestamp), 2(Long), 2(Long), 13(Long)
+2020-09-20 21:53:02.520 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : <==    Updates: 1
+2020-09-20 21:53:02.576  INFO 12576 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 21:53:02.594  INFO 12576 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

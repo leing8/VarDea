@@ -38,49 +38,137 @@
                     select="com.vardea.blog.mapper.TagMapper.getTagByBlog"/>
         <!--<result column="updateTime" property="comments"/>-->
     </resultMap>
-    <insert id="saveBlog"></insert>
-    <delete id="removeBlog"></delete>
-    <update id="updateBlog"></update>
+
+    <insert id="saveBlog">
+        INSERT INTO t_blog(title, content, first_picture, flag, views, appreciation, share_statement, commentabled,
+                           published, recommend, create_time, update_time, type_id, user_id, description, tag_ids)
+            VALUE (#{title}, #{content}, #{firstPicture}, #{flag}, #{views}, #{appreciation}, #{shareStatement},
+                   #{commentabled}, #{published}, #{recommend}, #{createTime}, #{updateTime}, #{typeId.id},
+                   #{userId.id},
+                   #{description}, #{tags.id})
+    </insert>
+
+    <delete id="removeBlog">
+        DELETE
+        FROM t_blog
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateBlog">
+        UPDATE t_blog
+        <set>
+            <if test="title != null">
+                , title = #{title}
+            </if>
+            <if test="content != null">
+                , content = #{content}
+            </if>
+            <if test="firstPicture != null">
+                , first_picture = #{firstPicture}
+            </if>
+            <if test="flag != null">
+                , flag = #{flag}
+            </if>
+            <if test="appreciation != null">
+                , appreciation = #{appreciation}
+            </if>
+            <if test="shareStatement != null">
+                , share_statement = #{shareStatement}
+            </if>
+            <if test="commentabled != null">
+                , commentabled = #{commentabled}
+            </if>
+            <if test="published != null">
+                , published = #{published}
+            </if>
+            <if test="recommend != null">
+                , recommend = #{recommend}
+            </if>
+            <if test="createTime != null">
+                , create_time = #{createTime}
+            </if>
+            <if test="updateTime != null">
+                , update_time = #{updateTime}
+            </if>
+            <if test="typeId != null">
+                , type_id = #{typeId.id}
+            </if>
+            <if test="userId != null">
+                , user_id = #{userId.id}
+            </if>
+            <!--            <if test="tags != null">
+                            AND tag_ids = #{tags.id}
+                        </if>-->
+        </set>
+        WHERE id = #{id}
+    </update>
 
 
     <select id="listBlog" resultMap="blogResultMap">
-        SELECT * FROM t_blog
-        <where>
-            <if test="id != null">
-                AND id = #{id}
-            </if>
-            <if test="userId != null">
-                AND user_id = #{userId}
-            </if>
-        </where>
-    </select>
-
-    <select id="getBlog" resultMap="blogResultMap">
-        SELECT
-            tb.*, tt.`name` type_name,
-            tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time
+        SELECT tb.*,
+               tt.`name`      type_name,
+               tu.nickname,
+               tu.username,
+               tu.password,
+               tu.email,
+               tu.avatar,
+               tu.type,
+               tu.create_time user_create_time,
+               tu.update_time user_update_time
         FROM t_blog tb
                  JOIN t_type tt
                  JOIN t_user tu
-        WHERE tb.id = 3
+        WHERE tb.type_id = tt.id
+          AND tb.user_id = tu.id
+    </select>
+
+    <select id="getBlog" resultMap="blogResultMap">
+        SELECT tb.*,
+               tt.`name`      type_name,
+               tu.nickname,
+               tu.username,
+               tu.password,
+               tu.email,
+               tu.avatar,
+               tu.type,
+               tu.create_time user_create_time,
+               tu.update_time user_update_time
+        FROM t_blog tb
+                 JOIN t_type tt
+                 JOIN t_user tu
+        WHERE tb.id = #{id}
           AND tb.type_id = tt.id
           AND tb.user_id = tu.id
     </select>
 
     <!--Type额外SQL 多表查询时将相应的Blog查询出来-->
     <select id="getBlogByType" resultType="Blog">
-        SELECT
-        id, title, content, first_picture, flag, views, appreciation, share_statement, commentabled,
-        published, recommend, create_time, update_time, type_id, user_id, description, tag_ids
-        FROM t_blog WHERE type_id = #{typeId}
+        SELECT id,
+               title,
+               content,
+               first_picture,
+               flag,
+               views,
+               appreciation,
+               share_statement,
+               commentabled,
+               published,
+               recommend,
+               create_time,
+               update_time,
+               type_id,
+               user_id,
+               description,
+               tag_ids
+        FROM t_blog
+        WHERE type_id = #{typeId}
     </select>
 
     <!--Tag额外SQL 多表查询时将相应的Blog查询出来-->
     <select id="getBlogByTag" resultType="Blog">
-        SELECT
-            *
+        SELECT *
         FROM t_blog tb
-        JOIN t_blog_tags tbt ON tb.id = tbt.blog_id
+                 JOIN t_blog_tags tbt ON tb.id = tbt.blog_id
         WHERE tbt.tag_id = 4
     </select>
 

@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = "blogs")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -29,12 +30,4 @@ public class Type {
      * 该类型下的博客
      */
     private List<Blog> blogs;
-
-    @Override
-    public String toString() {
-        return "Type{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

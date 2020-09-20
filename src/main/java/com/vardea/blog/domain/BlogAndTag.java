@@ -9,6 +9,7 @@ import lombok.*;
  */
 @Getter
 @Setter
+@ToString(exclude = "blogId")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -21,11 +22,4 @@ public class BlogAndTag {
      * 博客编号
      */
     private Blog blogId;
-
-    @Override
-    public String toString() {
-        return "BlogAndTag{" +
-                "tagId=" + tagId +
-                '}';
-    }
 }

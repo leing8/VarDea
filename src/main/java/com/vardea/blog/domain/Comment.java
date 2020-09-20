@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = {"blogId", "parentCommentId", "replyComments"})
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -61,19 +62,5 @@ public class Comment {
      * 子评论
      */
     private List<Comment> replyComments;
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", adminComment=" + adminComment +
-                ", avatar='" + avatar + '\'' +
-                ", createTime=" + createTime +
-                ", parentNickname='" + parentNickname + '\'' +
-                '}';
-    }
 }
 

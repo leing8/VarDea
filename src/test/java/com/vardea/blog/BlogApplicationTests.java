@@ -1,5 +1,6 @@
 package com.vardea.blog;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.vardea.blog.aop.LogAspect;
 import com.vardea.blog.domain.Blog;
@@ -21,6 +22,7 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -46,7 +48,7 @@ class BlogApplicationTests {
     }
 
     @Test
-    public void userTest(){
+    public void userTest() {
         String code = MD5Utils.code("1234");
         System.out.println(code);
     }
@@ -142,7 +144,7 @@ class BlogApplicationTests {
     }
 
     @Test
-    public void tagTest(){
+    public void tagTest() {
         /*Tag tag = new Tag();
         tag.setId(4L);
         Tag resultTag = tagService.getTag(tag);
@@ -166,5 +168,75 @@ class BlogApplicationTests {
         tag.setName("test 再次 测试修改");
         int i2 = tagService.updateTag(tag);
         System.out.println(i2);*/
+    }
+
+    @Test
+    public void blogTest() {
+/*        Blog blog = new Blog();
+        blog.setId(12L);
+
+        Blog resultBlog = blogService.getBlog(blog);
+        System.out.println(resultBlog);
+        System.out.println(resultBlog.getTypeId());
+        System.out.println(resultBlog.getUserId());*/
+        /*Blog blog = new Blog();
+        blog.setId(1L);
+        Page<Blog> page = new Page<>();
+        page.setPageNum(5);
+        List<Blog> blogs = blogService.listBlog(null, page);
+        System.out.println(blogs);*/
+
+/*        Blog blog = new Blog();
+
+        Type type = new Type();
+        type.setId(1L);
+        User user = new User();
+        user.setId(1L);
+
+        blog.setTitle("test");
+        blog.setContent("test");
+        blog.setFirstPicture("test");
+        blog.setFlag("test");
+        blog.setViews(200);
+        blog.setAppreciation(true);
+        blog.setShareStatement(true);
+        blog.setCommentabled(true);
+        blog.setPublished(true);
+        blog.setRecommend(true);
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setDescription("test");
+        blog.setTypeId(type);
+        blog.setUserId(user);
+        blogService.saveBlog(blog);*/
+
+/*        Blog blog = new Blog();
+        blog.setId(12L);
+        blogService.removeBlog(blog);*/
+
+/*        Blog blog = new Blog();
+
+        Type type = new Type();
+        type.setId(2L);
+        User user = new User();
+        user.setId(2L);
+
+        blog.setId(13L);
+        blog.setTitle("testUpdate");
+        blog.setContent("testUpdate");
+        blog.setFirstPicture("testUpdate");
+        blog.setFlag("testUpdate");
+        blog.setViews(500);
+        blog.setAppreciation(false);
+        blog.setShareStatement(false);
+        blog.setCommentabled(false);
+        blog.setPublished(false);
+        blog.setRecommend(false);
+        blog.setCreateTime(new Date());
+        blog.setUpdateTime(new Date());
+        blog.setDescription("testUpdate");
+        blog.setTypeId(type);
+        blog.setUserId(user);
+        blogService.updateBlog(blog);*/
     }
 }

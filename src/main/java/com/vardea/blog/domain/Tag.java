@@ -6,7 +6,6 @@ import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 
-
 /**
  * @author leing
  * @date 2020/9/9 17:40
@@ -14,6 +13,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = "blogs")
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -31,12 +31,4 @@ public class Tag {
      * 此标签下的博客
      */
     private List<Blog> blogs;
-
-    @Override
-    public String toString() {
-        return "Tag{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

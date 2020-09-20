@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
+@ToString(exclude = {"typeId", "userId", "tags", "comments"})
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
@@ -88,27 +89,4 @@ public class Blog {
      * 评论
      */
     private List<Comment> comments;
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", views=" + views +
-                ", appreciation=" + appreciation +
-                ", shareStatement=" + shareStatement +
-                ", commentabled=" + commentabled +
-                ", published=" + published +
-                ", recommend=" + recommend +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", description='" + description + '\'' +
-                ", typeId=" + typeId +
-                ", userId=" + userId +
-                ", tags=" + tags +
-                '}';
-    }
 }
