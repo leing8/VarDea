@@ -1,11 +1,11 @@
-2020-09-20 21:00:57.613  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7436 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:00:57.615 DEBUG 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:00:57.615  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:00:57.613  INFO 7436 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7436 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:00:57.615 DEBUG 7436 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:00:57.615  INFO 7436 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:01:01.881  INFO 7436 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:01:04.722  INFO 7436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:01:06.928  INFO 7436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:01:07.260  INFO 7436 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:01:08.455  INFO 7436 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.918 seconds (JVM running for 16.287)
+2020-09-20 21:01:08.455  INFO 7436 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 12.918 seconds (JVM running for 16.287)
 2020-09-20 21:01:09.034 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:01:09.426 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 1(Long)
 2020-09-20 21:01:09.513 DEBUG 7436 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
@@ -17,14 +17,14 @@
 2020-09-20 21:01:09.559 DEBUG 7436 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
 2020-09-20 21:01:09.606  INFO 7436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:01:09.621  INFO 7436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:01:26.107  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 1588 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:01:26.109 DEBUG 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:01:26.110  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:01:26.107  INFO 1588 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 1588 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:01:26.109 DEBUG 1588 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:01:26.110  INFO 1588 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:01:28.873  INFO 1588 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:01:31.458  INFO 1588 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:01:33.635  INFO 1588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:01:33.994  INFO 1588 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:01:35.176  INFO 1588 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.516 seconds (JVM running for 13.564)
+2020-09-20 21:01:35.176  INFO 1588 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.516 seconds (JVM running for 13.564)
 2020-09-20 21:01:35.729 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:01:36.075 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 1(Long)
 2020-09-20 21:01:36.136 DEBUG 1588 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
@@ -36,37 +36,37 @@
 2020-09-20 21:01:36.173 DEBUG 1588 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
 2020-09-20 21:01:36.219  INFO 1588 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:01:36.235  INFO 1588 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:02:32.095  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8700 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:02:32.097 DEBUG 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:02:32.097  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:02:32.095  INFO 8700 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8700 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:02:32.097 DEBUG 8700 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:02:32.097  INFO 8700 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:02:34.798  INFO 8700 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:02:37.467  INFO 8700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:02:39.556  INFO 8700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:02:39.910  INFO 8700 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:02:41.101  INFO 8700 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.252 seconds (JVM running for 12.925)
+2020-09-20 21:02:41.101  INFO 8700 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.252 seconds (JVM running for 12.925)
 2020-09-20 21:02:41.598 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:02:41.957 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: null
 2020-09-20 21:02:42.015 DEBUG 8700 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 0
 2020-09-20 21:02:42.074  INFO 8700 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:02:42.119  INFO 8700 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:04:53.393  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12476 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:04:53.396 DEBUG 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:04:53.397  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:04:53.393  INFO 12476 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12476 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:04:53.396 DEBUG 12476 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:04:53.397  INFO 12476 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:04:56.257  INFO 12476 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:04:58.778  INFO 12476 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:05:00.820  INFO 12476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:05:01.125  INFO 12476 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:05:02.212  INFO 12476 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.151 seconds (JVM running for 12.716)
+2020-09-20 21:05:02.212  INFO 12476 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.151 seconds (JVM running for 12.716)
 2020-09-20 21:05:02.680  INFO 12476 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:05:02.700  INFO 12476 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:05:50.409  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8592 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:05:50.411 DEBUG 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:05:50.411  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:05:50.409  INFO 8592 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8592 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:05:50.411 DEBUG 8592 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:05:50.411  INFO 8592 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:05:53.276  INFO 8592 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:05:55.899  INFO 8592 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:05:57.873  INFO 8592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:05:58.217  INFO 8592 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:05:59.344  INFO 8592 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.433 seconds (JVM running for 13.429)
+2020-09-20 21:05:59.344  INFO 8592 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.433 seconds (JVM running for 13.429)
 2020-09-20 21:06:00.079 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog
 2020-09-20 21:06:00.804 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
 2020-09-20 21:06:00.902 DEBUG 8592 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
@@ -87,14 +87,14 @@
 2020-09-20 21:06:01.074 DEBUG 8592 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
 2020-09-20 21:06:01.148  INFO 8592 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:06:01.173  INFO 8592 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:06:23.900  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 2448 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:06:23.902 DEBUG 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:06:23.902  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:06:23.900  INFO 2448 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 2448 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:06:23.902 DEBUG 2448 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:06:23.902  INFO 2448 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:06:26.724  INFO 2448 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:06:29.626  INFO 2448 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:06:31.624  INFO 2448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:06:31.965  INFO 2448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:06:33.132  INFO 2448 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.448 seconds (JVM running for 13.03)
+2020-09-20 21:06:33.132  INFO 2448 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.448 seconds (JVM running for 13.03)
 2020-09-20 21:06:33.818 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog
 2020-09-20 21:06:34.382 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
 2020-09-20 21:06:34.512 DEBUG 2448 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
@@ -115,14 +115,14 @@
 2020-09-20 21:06:34.634 DEBUG 2448 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
 2020-09-20 21:06:34.683  INFO 2448 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:06:34.703  INFO 2448 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:07:55.062  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:07:55.065 DEBUG 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:07:55.065  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:07:55.062  INFO 12296 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:07:55.065 DEBUG 12296 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:07:55.065  INFO 12296 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:07:57.991  INFO 12296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:08:00.913  INFO 12296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:08:02.939  INFO 12296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:08:03.267  INFO 12296 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:08:04.337  INFO 12296 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.651 seconds (JVM running for 13.252)
+2020-09-20 21:08:04.337  INFO 12296 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.651 seconds (JVM running for 13.252)
 2020-09-20 21:08:05.056 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:08:05.669 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : ==> Parameters: 
 2020-09-20 21:08:05.724 DEBUG 12296 --- [main] c.v.b.mapper.BlogMapper.listBlog_COUNT   : <==      Total: 1
@@ -143,27 +143,27 @@
 2020-09-20 21:08:05.797 DEBUG 12296 --- [main] c.v.blog.mapper.BlogMapper.listBlog      : <==      Total: 3
 2020-09-20 21:08:05.847  INFO 12296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:08:05.864  INFO 12296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:34:16.320  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:34:16.324 DEBUG 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:34:16.325  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:34:16.320  INFO 10296 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10296 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:34:16.324 DEBUG 10296 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:34:16.325  INFO 10296 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:34:20.471  INFO 10296 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:34:23.195  INFO 10296 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:34:25.351  INFO 10296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:34:25.726  INFO 10296 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:34:27.013  INFO 10296 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.94 seconds (JVM running for 16.05)
+2020-09-20 21:34:27.013  INFO 10296 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 12.94 seconds (JVM running for 16.05)
 2020-09-20 21:34:27.536 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==>  Preparing: INSERT INTO t_blog(title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2020-09-20 21:34:27.896 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==> Parameters: test(String), test(String), test(String), test(String), 200(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-09-20 21:34:27.44(Timestamp), 2020-09-20 21:34:27.44(Timestamp), 1(Long), 1(Long), test(String), null
 2020-09-20 21:34:27.914 DEBUG 10296 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : <==    Updates: 1
 2020-09-20 21:34:28.314  INFO 10296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:34:28.335  INFO 10296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:36:00.748  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12872 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:36:00.750 DEBUG 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:36:00.750  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:36:00.748  INFO 12872 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12872 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:36:00.750 DEBUG 12872 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:36:00.750  INFO 12872 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:36:03.696  INFO 12872 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:36:06.399  INFO 12872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:36:09.794  INFO 12872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:36:10.253  INFO 12872 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:36:12.077  INFO 12872 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.944 seconds (JVM running for 15.889)
+2020-09-20 21:36:12.077  INFO 12872 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 12.944 seconds (JVM running for 15.889)
 2020-09-20 21:36:12.986 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:36:13.452 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 12(Long)
 2020-09-20 21:36:13.517 DEBUG 12872 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
@@ -175,14 +175,14 @@
 2020-09-20 21:36:13.559 DEBUG 12872 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
 2020-09-20 21:36:13.608  INFO 12872 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:36:13.624  INFO 12872 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:37:14.665  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10524 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:37:14.667 DEBUG 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:37:14.668  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:37:14.665  INFO 10524 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 10524 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:37:14.667 DEBUG 10524 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:37:14.668  INFO 10524 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:37:17.559  INFO 10524 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:37:20.304  INFO 10524 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:37:22.359  INFO 10524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:37:22.732  INFO 10524 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:37:23.798  INFO 10524 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.485 seconds (JVM running for 13.431)
+2020-09-20 21:37:23.798  INFO 10524 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.485 seconds (JVM running for 13.431)
 2020-09-20 21:37:24.316 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==>  Preparing: SELECT tb.*, tt.`name` type_name, tu.nickname, tu.username, tu.password, tu.email, tu.avatar, tu.type, tu.create_time user_create_time, tu.update_time user_update_time FROM t_blog tb JOIN t_type tt JOIN t_user tu WHERE tb.id = ? AND tb.type_id = tt.id AND tb.user_id = tu.id
 2020-09-20 21:37:24.664 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : ==> Parameters: 12(Long)
 2020-09-20 21:37:24.723 DEBUG 10524 --- [main] c.v.blog.mapper.TagMapper.getTagByBlog   : ====>  Preparing: SELECT * FROM t_tag tt JOIN t_blog_tags tbt ON tt.id = tbt.tag_id WHERE tbt.blog_id = ?
@@ -194,53 +194,252 @@
 2020-09-20 21:37:24.760 DEBUG 10524 --- [main] c.vardea.blog.mapper.BlogMapper.getBlog  : <==      Total: 1
 2020-09-20 21:37:24.813  INFO 10524 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:37:24.828  INFO 10524 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:39:34.914  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8960 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:39:34.917 DEBUG 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:39:34.918  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:39:34.914  INFO 8960 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 8960 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:39:34.917 DEBUG 8960 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:39:34.918  INFO 8960 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:39:37.776  INFO 8960 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:39:42.355  INFO 8960 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:39:44.392  INFO 8960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:39:44.705  INFO 8960 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:39:45.831  INFO 8960 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 12.376 seconds (JVM running for 15.26)
+2020-09-20 21:39:45.831  INFO 8960 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 12.376 seconds (JVM running for 15.26)
 2020-09-20 21:39:46.330 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : ==>  Preparing: DELETE FROM t_blog WHERE id = ?
 2020-09-20 21:39:46.690 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : ==> Parameters: 12(Long)
 2020-09-20 21:39:46.701 DEBUG 8960 --- [main] c.v.blog.mapper.BlogMapper.removeBlog    : <==    Updates: 1
 2020-09-20 21:39:46.751  INFO 8960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:39:46.767  INFO 8960 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:49:16.155  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 13156 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:49:16.158 DEBUG 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:49:16.159  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:49:16.155  INFO 13156 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 13156 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:49:16.158 DEBUG 13156 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:49:16.159  INFO 13156 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:49:18.829  INFO 13156 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:49:21.543  INFO 13156 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:49:23.707  INFO 13156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:49:24.041  INFO 13156 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:49:25.272  INFO 13156 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.525 seconds (JVM running for 13.392)
+2020-09-20 21:49:25.272  INFO 13156 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.525 seconds (JVM running for 13.392)
 2020-09-20 21:49:25.832 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==>  Preparing: INSERT INTO t_blog(title, content, first_picture, flag, views, appreciation, share_statement, commentabled, published, recommend, create_time, update_time, type_id, user_id, description, tag_ids) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 2020-09-20 21:49:26.248 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : ==> Parameters: test(String), test(String), test(String), test(String), 200(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-09-20 21:49:25.735(Timestamp), 2020-09-20 21:49:25.735(Timestamp), 1(Long), 1(Long), test(String), null
 2020-09-20 21:49:26.261 DEBUG 13156 --- [main] c.v.blog.mapper.BlogMapper.saveBlog      : <==    Updates: 1
 2020-09-20 21:49:26.311  INFO 13156 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:49:26.329  INFO 13156 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:51:27.109  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7712 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:51:27.111 DEBUG 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:51:27.114  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:51:27.109  INFO 7712 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 7712 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:51:27.111 DEBUG 7712 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:51:27.114  INFO 7712 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:51:30.310  INFO 7712 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:51:33.094  INFO 7712 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:51:35.258  INFO 7712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:51:35.633  INFO 7712 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:51:36.655  INFO 7712 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 11.043 seconds (JVM running for 14.465)
+2020-09-20 21:51:36.655  INFO 7712 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 11.043 seconds (JVM running for 14.465)
 2020-09-20 21:51:37.222 DEBUG 7712 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==>  Preparing: UPDATE t_blog SET AND title = ? AND content = ? AND first_picture = ? AND flag = ? AND appreciation = ? AND share_statement = ? AND commentabled = ? AND published = ? AND recommend = ? AND create_time = ? AND update_time = ? AND type_id = ? AND user_id = ? WHERE id = ?
 2020-09-20 21:51:37.620  INFO 7712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:51:37.637  INFO 7712 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-09-20 21:52:52.300  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12576 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
-2020-09-20 21:52:52.302 DEBUG 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-2020-09-20 21:52:52.303  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : The following profiles are active: dev
+2020-09-20 21:52:52.300  INFO 12576 --- [main] BlogApplicationTests     : Starting BlogApplicationTests on Vostro-14-3449 with PID 12576 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-20 21:52:52.302 DEBUG 12576 --- [main] BlogApplicationTests     : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-09-20 21:52:52.303  INFO 12576 --- [main] BlogApplicationTests     : The following profiles are active: dev
 2020-09-20 21:52:55.311  INFO 12576 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2020-09-20 21:52:57.923  INFO 12576 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-09-20 21:53:00.066  INFO 12576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:53:00.462  INFO 12576 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-09-20 21:53:01.612  INFO 12576 --- [main] com.vardea.blog.BlogApplicationTests     : Started BlogApplicationTests in 10.739 seconds (JVM running for 13.862)
+2020-09-20 21:53:01.612  INFO 12576 --- [main] BlogApplicationTests     : Started BlogApplicationTests in 10.739 seconds (JVM running for 13.862)
 2020-09-20 21:53:02.172 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==>  Preparing: UPDATE t_blog SET title = ? , content = ? , first_picture = ? , flag = ? , appreciation = ? , share_statement = ? , commentabled = ? , published = ? , recommend = ? , create_time = ? , update_time = ? , type_id = ? , user_id = ? WHERE id = ?
 2020-09-20 21:53:02.506 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : ==> Parameters: testUpdate(String), testUpdate(String), testUpdate(String), testUpdate(String), false(Boolean), false(Boolean), false(Boolean), false(Boolean), false(Boolean), 2020-09-20 21:53:02.029(Timestamp), 2020-09-20 21:53:02.029(Timestamp), 2(Long), 2(Long), 13(Long)
 2020-09-20 21:53:02.520 DEBUG 12576 --- [main] c.v.blog.mapper.BlogMapper.updateBlog    : <==    Updates: 1
 2020-09-20 21:53:02.576  INFO 12576 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-09-20 21:53:02.594  INFO 12576 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-21 10:39:08.587  INFO 4800 --- [restartedMain] cn.vardea.blog.BlogApplication           : Starting BlogApplication on Vostro-14-3449 with PID 4800 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:39:08.593  INFO 4800 --- [restartedMain] cn.vardea.blog.BlogApplication           : The following profiles are active: dev
+2020-09-21 10:39:08.833  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-21 10:39:08.834  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-21 10:39:11.058  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-21 10:39:11.075  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-21 10:39:11.076  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-21 10:39:11.213  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-21 10:39:11.213  INFO 4800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2379 ms
+2020-09-21 10:39:11.594  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:39:12.893  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:39:13.843  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:39:13.999  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:39:14.524  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-21 10:39:14.671  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-21 10:39:14.695  INFO 4800 --- [restartedMain] cn.vardea.blog.BlogApplication           : Started BlogApplication in 7.216 seconds (JVM running for 9.397)
+2020-09-21 10:39:58.554  INFO 4800 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-21 10:39:58.554  INFO 4800 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-21 10:39:58.583  INFO 4800 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-09-21 10:40:05.224  INFO 4800 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/login, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.LoginController.login, args=[蒋乐行, 1234, org.apache.catalina.session.StandardSessionFacade@6cad8c59, org.apache.catalina.connector.RequestFacade@51e879b2])
+2020-09-21 10:40:06.017  INFO 4800 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : result: redirect:main
+2020-09-21 10:40:06.018  INFO 4800 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:40:41.590  INFO 4800 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/loginOut, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.LoginController.loginOut, args=[org.apache.catalina.session.StandardSessionFacade@6cad8c59])
+2020-09-21 10:40:41.591  INFO 4800 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : result: redirect:/manage
+2020-09-21 10:40:41.592  INFO 4800 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:41:02.373  INFO 4800 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/login, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.LoginController.login, args=[测试, 1234, org.apache.catalina.session.StandardSessionFacade@6cad8c59, org.apache.catalina.connector.RequestFacade@76ee234a])
+2020-09-21 10:41:02.384  INFO 4800 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : result: redirect:main
+2020-09-21 10:41:02.384  INFO 4800 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:41:04.787  INFO 4800 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:41:04.944  INFO 4800 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:41:04.945  INFO 4800 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:41:07.101  INFO 4800 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=4, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=4, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:41:07.126  INFO 4800 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:41:07.126  INFO 4800 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:42:03.553  INFO 1468 --- [main] cn.vardea.blog.BlogApplicationTests      : Starting BlogApplicationTests on Vostro-14-3449 with PID 1468 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:42:03.555  INFO 1468 --- [main] cn.vardea.blog.BlogApplicationTests      : The following profiles are active: dev
+2020-09-21 10:42:06.518  INFO 1468 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:42:10.385  INFO 1468 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:42:14.571  INFO 1468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:42:15.417  INFO 1468 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:42:18.255  INFO 1468 --- [main] cn.vardea.blog.BlogApplicationTests      : Started BlogApplicationTests in 15.998 seconds (JVM running for 19.393)
+2020-09-21 10:42:20.164  INFO 1468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:42:20.183  INFO 1468 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-21 10:42:40.356  INFO 5932 --- [main] cn.vardea.blog.BlogApplicationTests      : Starting BlogApplicationTests on Vostro-14-3449 with PID 5932 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:42:40.359  INFO 5932 --- [main] cn.vardea.blog.BlogApplicationTests      : The following profiles are active: dev
+2020-09-21 10:42:43.457  INFO 5932 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:42:46.035  INFO 5932 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:42:49.214  INFO 5932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:42:49.645  INFO 5932 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:42:50.958  INFO 5932 --- [main] cn.vardea.blog.BlogApplicationTests      : Started BlogApplicationTests in 11.923 seconds (JVM running for 14.859)
+2020-09-21 10:42:52.047  INFO 5932 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:42:52.064  INFO 5932 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-21 10:44:12.447  INFO 7848 --- [main] cn.vardea.blog.BlogApplicationTests      : Starting BlogApplicationTests on Vostro-14-3449 with PID 7848 (started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:44:12.449  INFO 7848 --- [main] cn.vardea.blog.BlogApplicationTests      : The following profiles are active: dev
+2020-09-21 10:44:15.326  INFO 7848 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:44:18.058  INFO 7848 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:44:20.195  INFO 7848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:44:20.514  INFO 7848 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:44:22.146  INFO 7848 --- [main] cn.vardea.blog.BlogApplicationTests      : Started BlogApplicationTests in 11.208 seconds (JVM running for 14.067)
+2020-09-21 10:44:23.228  INFO 7848 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:44:23.242  INFO 7848 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-21 10:46:20.931  INFO 2744 --- [restartedMain] cn.vardea.blog.BlogApplication           : Starting BlogApplication on Vostro-14-3449 with PID 2744 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:46:20.936  INFO 2744 --- [restartedMain] cn.vardea.blog.BlogApplication           : The following profiles are active: dev
+2020-09-21 10:46:21.136  INFO 2744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-21 10:46:21.137  INFO 2744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-21 10:46:23.164  INFO 2744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-21 10:46:23.176  INFO 2744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-21 10:46:23.177  INFO 2744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-21 10:46:23.292  INFO 2744 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-21 10:46:23.293  INFO 2744 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2153 ms
+2020-09-21 10:46:23.615  INFO 2744 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:46:24.752  INFO 2744 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:46:25.567  INFO 2744 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:46:25.711  INFO 2744 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:46:26.260  INFO 2744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-21 10:46:26.332  INFO 2744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-21 10:46:26.349  INFO 2744 --- [restartedMain] cn.vardea.blog.BlogApplication           : Started BlogApplication in 6.369 seconds (JVM running for 7.967)
+2020-09-21 10:51:41.408  INFO 6152 --- [restartedMain] cn.vardea.blog.BlogApplication           : Starting BlogApplication on Vostro-14-3449 with PID 6152 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:51:41.425  INFO 6152 --- [restartedMain] cn.vardea.blog.BlogApplication           : The following profiles are active: dev
+2020-09-21 10:51:41.595  INFO 6152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-21 10:51:41.596  INFO 6152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-21 10:51:45.163  INFO 6152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-21 10:51:45.177  INFO 6152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-21 10:51:45.178  INFO 6152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-21 10:51:45.301  INFO 6152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-21 10:51:45.301  INFO 6152 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3704 ms
+2020-09-21 10:51:45.590  INFO 6152 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:51:46.930  INFO 6152 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:51:47.786  INFO 6152 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:51:47.919  INFO 6152 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:51:48.404  INFO 6152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-21 10:51:48.467  INFO 6152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-21 10:51:48.486  INFO 6152 --- [restartedMain] cn.vardea.blog.BlogApplication           : Started BlogApplication in 8.313 seconds (JVM running for 9.982)
+2020-09-21 10:52:13.585  INFO 6152 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-21 10:52:13.585  INFO 6152 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-21 10:52:13.608  INFO 6152 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-09-21 10:52:42.005  INFO 6152 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/info, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.show.IndexController.info, args=[])
+2020-09-21 10:52:42.017  INFO 6152 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : result: info
+2020-09-21 10:52:42.018  INFO 6152 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:53:11.985  INFO 6152 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/info, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.show.IndexController.info, args=[])
+2020-09-21 10:53:11.985  INFO 6152 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : result: info
+2020-09-21 10:53:11.985  INFO 6152 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:55:59.398  INFO 3224 --- [restartedMain] cn.vardea.blog.BlogApplication           : Starting BlogApplication on Vostro-14-3449 with PID 3224 (E:\DevelopFiles\JAVA\Idea\VarDea-Blog\target\classes started by leing in E:\DevelopFiles\JAVA\Idea\VarDea-Blog)
+2020-09-21 10:55:59.403  INFO 3224 --- [restartedMain] cn.vardea.blog.BlogApplication           : The following profiles are active: dev
+2020-09-21 10:55:59.660  INFO 3224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-21 10:55:59.662  INFO 3224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-21 10:56:01.855  INFO 3224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-21 10:56:01.866  INFO 3224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-21 10:56:01.866  INFO 3224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-21 10:56:01.973  INFO 3224 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-21 10:56:01.973  INFO 3224 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2310 ms
+2020-09-21 10:56:02.231  INFO 3224 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-09-21 10:56:03.465  INFO 3224 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-21 10:56:04.272  INFO 3224 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-21 10:56:04.401  INFO 3224 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-21 10:56:04.884  INFO 3224 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-21 10:56:04.947  INFO 3224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-21 10:56:04.962  INFO 3224 --- [restartedMain] cn.vardea.blog.BlogApplication           : Started BlogApplication in 6.503 seconds (JVM running for 8.379)
+2020-09-21 10:56:26.614  INFO 3224 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-21 10:56:26.615  INFO 3224 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-21 10:56:26.643  INFO 3224 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-09-21 10:56:32.328  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/info, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.show.IndexController.info, args=[])
+2020-09-21 10:56:32.344  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : result: info
+2020-09-21 10:56:32.344  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:16.021  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/login, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.LoginController.login, args=[测试, 1234, org.apache.catalina.session.StandardSessionFacade@13aa0e8e, org.apache.catalina.connector.RequestFacade@23cd4cc2])
+2020-09-21 10:58:16.342  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : result: redirect:main
+2020-09-21 10:58:16.343  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:19.458  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/blogs, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.BlogController.blogs, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), {blogList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.blogList=org.springframework.validation.BeanPropertyBindingResult: 0 errors, blog=Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), org.springframework.validation.BindingResult.blog=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:19.608  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : result: manage/blogs
+2020-09-21 10:58:19.608  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:21.243  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:21.293  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:21.294  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:22.237  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:22.256  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:22.256  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:23.921  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:23.954  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:23.954  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:25.868  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/blogs, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.BlogController.blogs, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), {blogList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.blogList=org.springframework.validation.BeanPropertyBindingResult: 0 errors, blog=Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), org.springframework.validation.BindingResult.blog=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:25.908  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : result: manage/blogs
+2020-09-21 10:58:25.909  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:27.208  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:27.240  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:27.241  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:29.366  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/blogs, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.BlogController.blogs, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), {blogList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.blogList=org.springframework.validation.BeanPropertyBindingResult: 0 errors, blog=Blog(id=null, title=null, content=null, firstPicture=null, flag=null, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=false, createTime=null, updateTime=null, description=null), org.springframework.validation.BindingResult.blog=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:29.406  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : result: manage/blogs
+2020-09-21 10:58:29.406  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:31.199  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:31.207  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:31.207  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:33.136  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:33.158  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:33.158  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:35.271  INFO 3224 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:35.288  INFO 3224 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:35.288  INFO 3224 --- [http-nio-80-exec-1] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:36.727  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:36.748  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:36.749  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:37.591  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=4, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=4, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:37.609  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:37.610  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:39.007  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:39.024  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:39.024  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:39.968  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:39.986  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:39.986  INFO 3224 --- [http-nio-80-exec-5] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:40.817  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=1, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=1, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:40.837  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:40.837  INFO 3224 --- [http-nio-80-exec-7] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:42.583  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:42.591  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:42.592  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:44.188  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:44.197  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:44.198  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:45.199  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=3, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:45.207  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:45.207  INFO 3224 --- [http-nio-80-exec-6] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:47.567  INFO 3224 --- [http-nio-80-exec-4] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=2, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:47.575  INFO 3224 --- [http-nio-80-exec-4] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:47.576  INFO 3224 --- [http-nio-80-exec-4] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:48.521  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/edit/tag, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.toAddPage, args=[{}])
+2020-09-21 10:58:48.521  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : result: manage/edit/tag
+2020-09-21 10:58:48.521  INFO 3224 --- [http-nio-80-exec-8] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:50.433  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/types, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.listTypes, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {typeList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.typeList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:50.456  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : result: manage/types
+2020-09-21 10:58:50.456  INFO 3224 --- [http-nio-80-exec-10] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:52.032  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/edit/type, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TypeController.toAddPage, args=[{}])
+2020-09-21 10:58:52.033  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : result: manage/edit/type
+2020-09-21 10:58:52.033  INFO 3224 --- [http-nio-80-exec-3] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:54.253  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/tags, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.listTag, args=[Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], {tagList=Page{count=true, pageNum=0, pageSize=0, startRow=0, endRow=0, total=0, pages=0, reasonable=null, pageSizeZero=null}[], org.springframework.validation.BindingResult.tagList=org.springframework.validation.BeanPropertyBindingResult: 0 errors}])
+2020-09-21 10:58:54.264  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : result: manage/tags
+2020-09-21 10:58:54.264  INFO 3224 --- [http-nio-80-exec-9] cn.vardea.blog.aop.LogAspect             : ===============after================
+2020-09-21 10:58:55.685  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : Request: LogAspect.RequestLog(url=/manage/edit/tag, ip=0:0:0:0:0:0:0:1, methodName=cn.vardea.blog.web.controller.manage.TagController.toAddPage, args=[{}])
+2020-09-21 10:58:55.687  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : result: manage/edit/tag
+2020-09-21 10:58:55.687  INFO 3224 --- [http-nio-80-exec-2] cn.vardea.blog.aop.LogAspect             : ===============after================

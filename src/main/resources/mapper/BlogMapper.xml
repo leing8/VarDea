@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.vardea.blog.mapper.BlogMapper">
+<mapper namespace="cn.vardea.blog.mapper.BlogMapper">
 
     <resultMap id="blogResultMap" type="Blog">
         <id property="id" column="id"/>
@@ -35,7 +35,7 @@
             <result property="updateTime" column="user_update_time"/>
         </association>
         <collection property="tags" column="id" ofType="Tag"
-                    select="com.vardea.blog.mapper.TagMapper.getTagByBlog"/>
+                    select="cn.vardea.blog.mapper.TagMapper.getTagByBlog"/>
         <!--<result column="updateTime" property="comments"/>-->
     </resultMap>
 
@@ -96,7 +96,8 @@
             <if test="userId != null">
                 , user_id = #{userId.id}
             </if>
-            <!--            <if test="tags != null">
+            <!-- 要使用for循环完成该 需求
+                       <if test="tags != null">
                             AND tag_ids = #{tags.id}
                         </if>-->
         </set>
